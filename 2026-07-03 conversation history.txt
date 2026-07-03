@@ -1,0 +1,1200 @@
+╭─── Claude Code v2.1.197 ─────────────────────────────────────────────────────╮
+│                                                    │ Tips for getting        │
+│               Welcome back Duc Minh!               │ started                 │
+│                                                    │ Run /init to create a … │
+│                       ▐▛███▜▌                      │ ─────────────────────── │
+│                      ▝▜█████▛▘                     │ What's new              │
+│                        ▘▘ ▝▝                       │ Introducing Claude Son… │
+│      Sonnet 5 · Claude Pro ·                       │ Added support for orga… │
+│      nguyenducminh938@gmail.com's Organization     │ Added readable default… │
+│          ~\claude code\marketing-workspace         │ /release-notes for more │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+ ▎ Fable 5 is back.
+ ▎ Until July 7, you can use up to 50% of your plan's weekly usage limit on Fable 5. If you hit your limit, you can continue on Fable 5 with usage credits. Fable 5 draws down usage faster than Opus 4.8. Learn more (https://support.claude.com/en/articles/15424964-claude-fable-5-promotional-access)
+
+❯ Mình muốn xây dựng một workspace Claude Code phục vụ công việc Digital        
+  Marketing.                                                                    
+                                                                                
+  Hãy khởi tạo cấu trúc project như sau:                                        
+                                                                                
+  marketing-workspace/                                                          
+  ├── .claude/                                                                  
+  │   └── skills/                                                               
+  ├── outputs/                                                                  
+  ├── README.md                                                                 
+  └── .gitignore                                                                
+                                                                                
+  Yêu cầu:                                                                      
+                                                                                
+  - Tạo đầy đủ các thư mục và file nếu chưa có.                                 
+  - Viết README.md bằng tiếng Việt, giới thiệu ngắn về workspace và mục đích sử 
+  dụng.                                                                         
+  - Tạo .gitignore phù hợp cho workspace Claude Code.                           
+  - Chưa tạo bất kỳ Skill nào.                                                  
+  - Không tạo thêm file hoặc thư mục ngoài yêu cầu.                             
+  - Sau khi hoàn thành thì dừng lại và báo mình.                                
+
+  Listed 1 directory (ctrl+o to expand)
+
+● Thư mục đang trống. Mình sẽ tạo cấu trúc thư mục và các file cần thiết.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+❯ mình chưa thấy                                                                
+
+● Được, mình dừng lại. Bạn muốn mình làm gì tiếp theo — thử lại việc tạo thư
+  mục, hay có gì chưa rõ cần trao đổi trước?
+
+✻ Baked for 3s
+
+❯ tạo thư mục như yêu cầu bên trên                                              
+
+  Ran 1 shell command (ctrl+o to expand)
+
+● Đã tạo xong .claude/skills/ và outputs/. Giờ mình tạo README.md và .gitignore.
+
+● Write(README.md)
+  ⎿  Wrote 24 lines to README.md
+      1 # Marketing Workspace
+      3 Đây là workspace Claude Code phục vụ cho công việc **Digital Mark
+        eting** — nơi tổ chức các quy trình làm việc, tài liệu và kết quả
+      4 
+      5 ## Mục đích sử dụng
+      7 - Là không gian làm việc trung tâm cho các tác vụ Digital Marketi
+        ng (nội dung, chiến dịch, phân tích, v.v.) khi sử dụng Claude Cod
+      8 - Chứa các **Skills** tuỳ chỉnh (trong `.claude/skills/`) để mở r
+        ộng khả năng của Claude Code cho các quy trình marketing cụ thể.
+        rong quá trình làm việc.
+     … +19 lines (ctrl+o to expand)
+
+● Write(.gitignore)
+  ⎿  Wrote 20 lines to .gitignore
+       1 # Claude Code local settings
+       2 .claude/settings.local.json
+       3 
+       4 # OS files
+       5 .DS_Store
+       6 Thumbs.db
+       7 
+       8 # Editor/IDE
+       9 .vscode/
+      10 .idea/
+     … +10 lines (ctrl+o to expand)
+
+● Đã hoàn thành khởi tạo cấu trúc workspace:
+
+  marketing-workspace/
+  ├── .claude/
+  │   └── skills/       (rỗng, chưa có Skill nào)
+  ├── outputs/          (rỗng)
+  ├── README.md
+  └── .gitignore
+
+  Không tạo thêm file/thư mục nào ngoài yêu cầu. Bạn kiểm tra lại và cho mình
+  biết bước tiếp theo nhé.
+
+✻ Cogitated for 20s
+
+❯ Hãy tạo Skill đầu tiên cho workspace này.                                     
+                                                                                
+  Tên Skill:                                                                    
+  ads-report                                                                    
+                                                                                
+  Đường dẫn:                                                                    
+                                                                                
+  .claude/                                                                      
+  └── skills/                                                                   
+      └── ads-report/                                                           
+                                                                                
+  Yêu cầu tạo đầy đủ cấu trúc:                                                  
+                                                                                
+  ads-report/                                                                   
+  ├── SKILL.md                                                                  
+  ├── templates/                                                                
+  │   ├── report-template.md                                                    
+  │   └── client-message-template.md                                            
+  ├── checklist/                                                                
+  │   └── qa-checklist.md                                                       
+  ├── examples/                                                                 
+  │   └── sample-report.md                                                      
+  └── docs/                                                                     
+      └── metrics-guide.md                                                      
+                                                                                
+  Yêu cầu chi tiết:                                                             
+                                                                                
+  1. SKILL.md                                                                   
+  - Viết bằng tiếng Việt.                                                       
+  - Mô tả mục đích của Skill.                                                   
+  - Nêu khi nào nên sử dụng.                                                    
+  - Hướng dẫn Claude đọc các file trong templates, checklist, docs và examples  
+  khi cần.                                                                      
+  - Không nhồi toàn bộ nội dung vào SKILL.md.                                   
+                                                                                
+  2. report-template.md                                                         
+  - Template đánh giá báo cáo Facebook Ads / Google Ads.                        
+  - Bao gồm:                                                                    
+    - Tổng quan                                                                 
+    - Phân tích chỉ số                                                          
+    - Insight                                                                   
+    - Recommendation                                                            
+    - Việc cần làm tiếp theo                                                    
+                                                                                
+  3. client-message-template.md                                                 
+  - Template nhắn khách sau khi gửi báo cáo.                                    
+  - Giọng văn chuyên nghiệp, ngắn gọn.                                          
+                                                                                
+  4. qa-checklist.md                                                            
+  Checklist tự kiểm tra gồm:                                                    
+  - Có nhận xét CTR                                                             
+  - Có nhận xét CPC                                                             
+  - Có nhận xét CPM                                                             
+  - Có nhận xét Conversion                                                      
+  - Có Recommendation                                                           
+  - Có việc cần triển khai tiếp                                                 
+                                                                                
+  5. sample-report.md                                                           
+  Ví dụ một báo cáo hoàn chỉnh.                                                 
+                                                                                
+  6. metrics-guide.md                                                           
+  Giải thích ngắn gọn ý nghĩa của:                                              
+  CTR                                                                           
+  CPC                                                                           
+  CPM                                                                           
+  CPA                                                                           
+  ROAS                                                                          
+  Conversion Rate                                                               
+  Impression                                                                    
+  Reach                                                                         
+  Frequency                                                                     
+                                                                                
+  Sau khi tạo xong Skill thì dừng lại và báo mình.                              
+
+  Ran 1 shell command (ctrl+o to expand)
+
+● Giờ mình sẽ viết từng file nội dung cho Skill.
+
+● Write(.claude\skills\ads-report\SKILL.md)
+  ⎿  Wrote 32 lines to .claude\skills\ads-report\SKILL.md
+       1 ---
+       3 description: Hỗ trợ tạo và kiểm tra báo cáo hiệu quả quảng cáo F
+         acebook Ads / Google Ads (phân tích chỉ số, insight, recommendat
+         ion) và soạn tin nhắn gửi khách sau báo cáo. Dùng khi người dùng
+         AS, hoặc soạn message gửi client kèm báo cáo.
+       4 ---
+       6 # Ads Report
+       7 
+       8 ## Mục đích
+      10 Skill này giúp Claude hỗ trợ đội ngũ Digital Marketing:
+     … +39 lines (ctrl+o to expand)
+
+● Write(.claude\skills\ads-report\templates\report-template.md)
+  ⎿  Wrote 53 lines to
+     .claude\skills\ads-report\templates\report-template.md
+       1 # Báo cáo hiệu quả quảng cáo
+       2 
+       3 **Khách hàng:** [Tên khách hàng]
+       4 **Kênh:** [Facebook Ads / Google Ads]
+       5 **Giai đoạn báo cáo:** [dd/mm/yyyy - dd/mm/yyyy]
+       6 **Người thực hiện:** [Tên]
+       7 
+       8 ---
+       9 
+      10 ## 1. Tổng quan
+     … +47 lines (ctrl+o to expand)
+
+● Write(.claude\skills\ads-report\templates\client-message-template.md)
+  ⎿  Wrote 41 lines to
+     .claude\skills\ads-report\templates\client-message-template.md
+       1 # Template tin nhắn gửi khách sau báo cáo
+       2 
+       3 ## Phiên bản ngắn gọn (chat/Zalo/Email nhanh)
+       5 ```
+       6 Chào anh/chị [Tên khách hàng],
+       7 
+       8 Em gửi anh/chị báo cáo hiệu quả quảng cáo [kênh: Facebook Ads/Go
+         ogle Ads] giai đoạn [dd/mm - dd/mm].
+      10 Tóm tắt nhanh: [1 câu nhận xét kết quả chính, ví dụ: CTR và Conv
+         ersion Rate cải thiện so với kỳ trước].
+     … +41 lines (ctrl+o to expand)
+
+● Write(.claude\skills\ads-report\checklist\qa-checklist.md)
+  ⎿  Wrote 12 lines to .claude\skills\ads-report\checklist\qa-checklist.md
+       1 # QA Checklist — Báo cáo quảng cáo
+       2 
+       3 Trước khi gửi báo cáo cho khách hàng, kiểm tra đủ các mục sau:
+       4 
+       5 - [ ] Có nhận xét CTR
+       6 - [ ] Có nhận xét CPC
+       7 - [ ] Có nhận xét CPM
+       8 - [ ] Có nhận xét Conversion
+       9 - [ ] Có Recommendation
+      10 - [ ] Có việc cần triển khai tiếp theo
+     … +2 lines (ctrl+o to expand)
+
+● Write(.claude\skills\ads-report\docs\metrics-guide.md)
+  ⎿  Wrote 19 lines to .claude\skills\ads-report\docs\metrics-guide.md
+      1 # Hướng dẫn ý nghĩa các chỉ số quảng cáo
+      3 - **CTR (Click-Through Rate):** Tỷ lệ click trên số lượt hiển thị
+         (Clicks / Impressions). Phản ánh mức độ hấp dẫn của creative/nội
+      4 
+        . Giúp đánh giá hiệu quả chi phí ở giai đoạn thu hút traffic.
+      6 
+        Phản ánh mức độ cạnh tranh của thị trường/đối tượng và chi phí ti
+        ếp cận.
+      9 - **CPA (Cost Per Acquisition):** Chi phí trung bình để có được m
+        đánh giá hiệu quả cuối phễu.
+     … +24 lines (ctrl+o to expand)
+
+● Cuối cùng là file ví dụ báo cáo hoàn chỉnh.
+
+● Write(.claude\skills\ads-report\examples\sample-report.md)
+  ⎿  Wrote 56 lines to .claude\skills\ads-report\examples\sample-report.md
+       1 # Báo cáo hiệu quả quảng cáo
+       2 
+       3 **Khách hàng:** Công ty ABC (Nội thất)
+       4 **Kênh:** Facebook Ads
+       5 **Giai đoạn báo cáo:** 01/06/2026 - 30/06/2026
+       6 **Người thực hiện:** Minh Nguyễn
+       7 
+       8 ---
+       9 
+      10 ## 1. Tổng quan
+     … +65 lines (ctrl+o to expand)
+
+● Đã tạo xong Skill ads-report với đầy đủ cấu trúc:
+
+  .claude/skills/ads-report/
+  ├── SKILL.md
+  ├── templates/
+  │   ├── report-template.md
+  │   └── client-message-template.md
+  ├── checklist/
+  │   └── qa-checklist.md
+  ├── examples/
+  │   └── sample-report.md
+  └── docs/
+      └── metrics-guide.md
+
+  - SKILL.md mô tả mục đích, khi nào dùng, và hướng dẫn Claude đọc đúng file cần
+  thiết thay vì nhồi nội dung vào đây.
+  - Các file còn lại đầy đủ nội dung theo yêu cầu (template báo cáo, template
+  nhắn khách, checklist QA, ví dụ báo cáo hoàn chỉnh, giải thích chỉ số).
+
+  Bạn kiểm tra lại giúp mình nhé.
+
+✻ Brewed for 1m 29s
+
+※ recap: Set up the marketing-workspace with .claude/skills/, outputs/, README, and .gitignore, then built out the ads-report skill (templates, checklist, examples, metrics guide). It's complete—next step is for you to review the files. (disable recaps in /config)
+
+❯ Hãy kiểm tra lại Skill ads-report vừa tạo.                                    
+                                                                                
+  Đánh giá theo các tiêu chí sau:                                               
+                                                                                
+  1. SKILL.md đã đủ rõ để Claude tự sử dụng chưa?                               
+  2. Có thiếu metadata/frontmatter không?                                       
+  3. Các template có đủ để sử dụng thực tế không?                               
+  4. Checklist đã đủ để tự kiểm tra chất lượng đầu ra chưa?                     
+  5. Có điểm nào nên cải thiện để Skill chuyên nghiệp hơn?                      
+                                                                                
+  Nếu cần thì cập nhật các file ngay.                                           
+  Sau khi hoàn thành thì dừng lại.                                              
+  Read 6 files (ctrl+o to expand)
+
+● Đã đọc lại toàn bộ 6 file. Đánh giá theo từng tiêu chí:
+
+  1. SKILL.md — Đã nêu mục đích, khi nào dùng, cách đọc tài nguyên. Tuy nhiên
+  thiếu quy trình làm việc từng bước nối các file lại thành một luồng — hiện
+  Claude phải tự suy ra thứ tự dùng file.
+
+  2. Metadata/frontmatter — Có name và description (2 trường bắt buộc của Claude
+  Code Skill), đủ để Skill được nhận diện đúng.
+
+  3. Templates — Cấu trúc ổn nhưng thiếu cột so sánh với mục tiêu/KPI trong bảng
+  chỉ số, và client-message-template.md chỉ có kịch bản "kết quả tốt" — thiếu
+  biến thể khi kết quả chưa đạt kỳ vọng, vốn rất thường gặp trong thực tế.
+
+  4. Checklist — Chỉ đúng 6 mục theo yêu cầu gốc, nhưng để tự QA thực sự thì
+  thiếu các mục về tính nhất quán số liệu, chính tả, đính kèm file, thông tin 
+  khách hàng/giai đoạn.
+
+  5. Cải thiện khác — Bổ sung như trên sẽ giúp Skill sát thực tế agency hơn.
+
+  Mình sẽ cập nhật ngay các file này.
+
+● Update(.claude\skills\ads-report\SKILL.md)
+  ⎿  Added 15 lines
+      30  - **Cần giải thích hoặc tra cứu ý nghĩa chỉ số**: đọc `docs/met
+          rics-guide.md`.
+      31  
+      32  Luôn ưu tiên đọc file tương ứng trước khi tạo nội dung, thay vì
+           tự suy đoán cấu trúc hoặc định nghĩa chỉ số.
+      33 +                                                               
+      34 +## Quy trình gợi ý khi viết báo cáo từ đầu đến cuối            
+      35 +                                                               
+      36 +1. Thu thập số liệu quảng cáo từ người dùng (hoặc hỏi lại nếu t
+         +hiếu số liệu cần thiết).                                       
+      37 +2. Đọc `templates/report-template.md` và điền số liệu, nhận xét
+         + theo đúng cấu trúc.                                           
+      38 +3. Nếu chưa chắc cách nhận xét hoặc trình bày, đối chiếu với `e
+         +xamples/sample-report.md`.                                     
+      39 +4. Khi cần giải thích ý nghĩa một chỉ số cho đúng, tra `docs/me
+         +trics-guide.md` thay vì tự suy đoán.                           
+      40 +5. Trước khi xem là hoàn tất, rà lại báo cáo theo `checklist/qa
+         +-checklist.md`; bổ sung phần còn thiếu.                        
+      41 +6. Nếu người dùng cần gửi báo cáo cho khách, dùng `templates/cl
+         +ient-message-template.md` để soạn tin nhắn/email kèm theo.     
+      42 +                                                               
+      43 +## Lưu ý về văn phong                                          
+      44 +                                                               
+      45 +- Nhận xét chỉ số cần gắn với **số liệu cụ thể** (tăng/giảm bao
+         + nhiêu %, so với kỳ nào), tránh nhận xét chung chung như "chỉ s
+         +ố ổn định".                                                    
+      46 +- Ưu tiên diễn đạt ngắn gọn, rõ ràng, đúng thuật ngữ ngành ads;
+         + giữ giọng văn chuyên nghiệp khi trình bày cho khách hàng.     
+      47 +- Nếu kết quả kỳ này kém hơn kỳ trước, vẫn nêu thẳng số liệu và
+         + tập trung vào nguyên nhân + hướng khắc phục thay vì né tránh. 
+
+● Update(.claude\skills\ads-report\templates\report-template.md)
+  ⎿  Added 16 lines, removed 12 lines
+      15  
+      16  ## 2. Phân tích chỉ số
+      17  
+      18 -| Chỉ số | Kỳ này | Kỳ trước | Thay đổi |                      
+      19 -|---|---|---|---|                                              
+      20 -| Impression | | | |                                           
+      21 -| Reach | | | |                                                
+      22 -| Frequency | | | |                                            
+      23 -| CTR | | | |                                                  
+      24 -| CPC | | | |                                                  
+      25 -| CPM | | | |                                                  
+      26 -| Conversion | | | |                                           
+      27 -| Conversion Rate | | | |                                      
+      28 -| CPA | | | |                                                  
+      29 -| ROAS | | | |                                                 
+      18 +*Nguồn dữ liệu: [Ads Manager / Google Ads / khác] — [ngày xuất 
+         +báo cáo]*                                                      
+      19  
+      20 +| Chỉ số | Mục tiêu (nếu có) | Kỳ này | Kỳ trước | Thay đổi |  
+      21 +|---|---|---|---|---|                                          
+      22 +| Impression | | | | |                                         
+      23 +| Reach | | | | |                                              
+      24 +| Frequency | | | | |                                          
+      25 +| CTR | | | | |                                                
+      26 +| CPC | | | | |                                                
+      27 +| CPM | | | | |                                                
+      28 +| Conversion | | | | |                                         
+      29 +| Conversion Rate | | | | |                                    
+      30 +| CPA | | | | |                                                
+      31 +| ROAS | | | | |                                               
+      32 +                                                               
+      33 +> Ghi chú: một số chỉ số có thể không áp dụng tuỳ mục tiêu chiế
+         +n dịch (ví dụ chiến dịch nhận diện thương hiệu có thể không cần
+         + theo dõi CPA/ROAS). Xoá dòng không phù hợp trước khi gửi khách
+         +.                                                              
+      34 +                                                               
+      35  Nhận xét chi tiết từng chỉ số:
+      36  
+      37  - **CTR:** [nhận xét]
+
+● Giờ thêm biến thể "kết quả chưa đạt kỳ vọng" vào client-message-template.
+
+● Update(.claude\skills\ads-report\templates\client-message-template.md)
+  ⎿  Added 15 lines
+      35  [Vị trí/Công ty]
+      36  ```
+      37  
+      38 +## Phiên bản khi kết quả chưa đạt kỳ vọng                      
+      39 +                                                               
+      40 +```                                                            
+      41 +Chào anh/chị [Tên khách hàng],                                 
+      42 +                                                               
+      43 +Em gửi anh/chị báo cáo hiệu quả quảng cáo [kênh] giai đoạn [dd/
+         +mm - dd/mm].                                                   
+      44 +                                                               
+      45 +Trong kỳ này, [chỉ số cụ thể, ví dụ: CPA] chưa đạt như kỳ vọng,
+         + chủ yếu do [nguyên nhân ngắn gọn, ví dụ: mức độ cạnh tranh tăn
+         +g trong ngành]. Em đã phân tích chi tiết trong báo cáo và đề xu
+         +ất hướng điều chỉnh cho giai đoạn tới nhằm cải thiện hiệu quả. 
+      46 +                                                               
+      47 +Em mong muốn trao đổi thêm với anh/chị để thống nhất phương án 
+         +tối ưu trước khi triển khai. Anh/chị sắp xếp thời gian giúp em 
+         +trong tuần này được không ạ?                                   
+      48 +                                                               
+      49 +Cảm ơn anh/chị!                                                
+      50 +[Tên người gửi]                                                
+      51 +```                                                            
+      52 +                                                               
+      53  **Lưu ý khi sử dụng:**
+      54  - Giữ giọng văn chuyên nghiệp, ngắn gọn, tránh dài dòng.
+      55  - Luôn đính kèm hoặc link tới báo cáo đầy đủ.
+
+● Cuối cùng, mở rộng checklist để QA thực tế hơn, vẫn giữ nguyên 6 mục gốc.
+
+● Update(.claude\skills\ads-report\checklist\qa-checklist.md)
+  ⎿  Added 12 lines
+      2  
+      3  Trước khi gửi báo cáo cho khách hàng, kiểm tra đủ các mục sau:
+      4  
+      5 +## Nội dung bắt buộc                                            
+      6 +                                                                
+      7  - [ ] Có nhận xét CTR
+      8  - [ ] Có nhận xét CPC
+      9  - [ ] Có nhận xét CPM
+     ...
+      11  - [ ] Có Recommendation
+      12  - [ ] Có việc cần triển khai tiếp theo
+      13  
+      14 +## Kiểm tra chất lượng bổ sung                                 
+      15 +                                                               
+      16 +- [ ] Số liệu trong bảng khớp với số liệu nêu trong phần nhận x
+         +ét/insight                                                     
+      17 +- [ ] Đơn vị (đ, %, VNĐ) và định dạng số nhất quán xuyên suốt b
+         +áo cáo                                                         
+      18 +- [ ] Đã điền đầy đủ thông tin khách hàng, kênh, giai đoạn báo 
+         +cáo ở đầu file                                                 
+      19 +- [ ] Không còn placeholder dạng [...] chưa được điền          
+      20 +- [ ] Đã kiểm tra chính tả, ngữ pháp trước khi gửi             
+      21 +- [ ] Mỗi việc cần làm tiếp theo có người phụ trách và thời hạn
+         + rõ ràng                                                       
+      22 +- [ ] Đã đính kèm/link đầy đủ file báo cáo hoặc dashboard liên 
+         +quan (nếu gửi kèm tin nhắn)                                    
+      23 +                                                               
+      24  Nếu thiếu bất kỳ mục nào, bổ sung vào báo cáo trước khi gửi.
+
+● Đã kiểm tra và cập nhật xong Skill ads-report:
+
+  - SKILL.md: thêm mục "Quy trình gợi ý" (6 bước nối các file thành luồng làm
+  việc hoàn chỉnh) và "Lưu ý về văn phong" — giúp Claude tự vận hành mà không
+  cần đoán thứ tự thao tác.
+  - report-template.md: thêm cột "Mục tiêu (nếu có)" để so sánh KPI, và ghi chú
+  nguồn dữ liệu + lưu ý chỉ số không áp dụng tuỳ loại chiến dịch.
+  - client-message-template.md: thêm biến thể tin nhắn khi kết quả chưa đạt kỳ 
+  vọng — sát thực tế hơn vì không phải báo cáo nào cũng tích cực.
+  - qa-checklist.md: giữ nguyên 6 mục gốc, bổ sung nhóm "Kiểm tra chất lượng bổ
+  sung" (khớp số liệu, định dạng nhất quán, không sót placeholder, chính tả,
+  người phụ trách/thời hạn, đính kèm file).
+  - metadata/frontmatter: đã đủ (name, description), không cần bổ sung thêm.
+  - metrics-guide.md và sample-report.md: giữ nguyên, nội dung đã đầy đủ và
+  chính xác.
+
+  Dừng lại tại đây, chờ bạn phản hồi.
+
+✻ Worked for 1m 38s
+
+※ recap: Đã xây xong workspace marketing-workspace và Skill ads-report đầu tiên (templates, checklist, docs, examples), vừa hoàn tất rà soát và cải thiện các file theo 5 tiêu chí. Đang chờ bạn phản hồi trước khi làm bước tiếp theo. (disable recaps in /config)
+
+❯ skill này đã ok, Hãy tạo Skill thứ hai cho workspace.                         
+                                                                                
+  Tên Skill:                                                                    
+  proposal-generator                                                            
+                                                                                
+  Đường dẫn:                                                                    
+                                                                                
+  .claude/                                                                      
+  └── skills/                                                                   
+      └── proposal-generator/                                                   
+                                                                                
+  Tạo đầy đủ cấu trúc sau:                                                      
+                                                                                
+  proposal-generator/                                                           
+  ├── SKILL.md                                                                  
+  ├── templates/                                                                
+  │   ├── proposal-template.md                                                  
+  │   ├── quotation-template.md                                                 
+  │   └── email-template.md                                                     
+  ├── checklist/                                                                
+  │   └── qa-checklist.md                                                       
+  ├── examples/                                                                 
+  │   └── sample-proposal.md                                                    
+  └── docs/                                                                     
+      └── proposal-guide.md                                                     
+                                                                                
+  Yêu cầu:                                                                      
+                                                                                
+  1. SKILL.md                                                                   
+  - Viết bằng tiếng Việt.                                                       
+  - Có frontmatter (name, description).                                         
+  - Giải thích khi nào nên dùng Skill.                                          
+  - Hướng dẫn Claude đọc các file trong templates, checklist, examples và docs  
+  khi cần.                                                                      
+  - Có quy trình làm việc từng bước.                                            
+                                                                                
+  2. proposal-template.md                                                       
+  Template lập proposal Digital Marketing gồm:                                  
+  - Thông tin khách hàng                                                        
+  - Phân tích hiện trạng                                                        
+  - Mục tiêu                                                                    
+  - Đối tượng mục tiêu                                                          
+  - Chiến lược triển khai                                                       
+  - Kế hoạch quảng cáo                                                          
+  - KPI                                                                         
+  - Timeline                                                                    
+  - Ngân sách                                                                   
+  - Deliverables                                                                
+                                                                                
+  3. quotation-template.md                                                      
+  Template báo giá gồm:                                                         
+  - Hạng mục                                                                    
+  - Chi phí                                                                     
+  - Ghi chú                                                                     
+  - Điều khoản thanh toán                                                       
+                                                                                
+  4. email-template.md                                                          
+  Template email gửi proposal cho khách hàng.                                   
+                                                                                
+  5. qa-checklist.md                                                            
+  Checklist kiểm tra proposal:                                                  
+  - Đủ mục tiêu                                                                 
+  - Đủ KPI                                                                      
+  - Có timeline                                                                 
+  - Có ngân sách                                                                
+  - Có CTA                                                                      
+  - Không còn placeholder                                                       
+  - Chính tả đúng                                                               
+                                                                                
+  6. sample-proposal.md                                                         
+  Ví dụ proposal hoàn chỉnh.                                                    
+                                                                                
+  7. proposal-guide.md                                                          
+  Hướng dẫn ngắn về cách xây dựng proposal Digital Marketing chuyên nghiệp.     
+                                                                                
+  Sau khi tạo xong hãy tự kiểm tra lại Skill và cập nhật nếu cần, sau đó dừng   
+  lại.                                                                          
+
+  Ran 1 shell command (ctrl+o to expand)
+
+● Write(.claude\skills\proposal-generator\SKILL.md)
+  ⎿  Wrote 51 lines to .claude\skills\proposal-generator\SKILL.md
+       1 ---
+       3 description: Hỗ trợ xây dựng proposal (đề xuất) Digital Marketin
+         g, báo giá và email gửi khách hàng — từ phân tích hiện trạng, mụ
+         c tiêu, chiến lược, KPI, timeline, ngân sách đến deliverables. D
+         dịch vụ, hoặc soạn email gửi proposal cho khách/đối tác.
+       4 ---
+       6 # Proposal Generator
+       7 
+       8 ## Mục đích
+      10 Skill này giúp Claude hỗ trợ đội ngũ Digital Marketing/Sales:
+     … +72 lines (ctrl+o to expand)
+
+● Write(.claude\skills\proposal-generator\templates\proposal-template.md)
+  ⎿  Wrote 79 lines to
+     .claude\skills\proposal-generator\templates\proposal-template.md
+       1 # Proposal Digital Marketing
+       2 
+       3 **Khách hàng:** [Tên khách hàng/công ty]
+       4 **Dự án/Chiến dịch:** [Tên dự án]
+       5 **Ngày lập:** [dd/mm/yyyy]
+       6 **Người phụ trách:** [Tên]
+       7 
+       8 ---
+       9 
+      10 ## 1. Thông tin khách hàng
+     … +75 lines (ctrl+o to expand)
+
+● Write(.claude\skills\proposal-generator\templates\quotation-template.md)
+  ⎿  Wrote 30 lines to
+     .claude\skills\proposal-generator\templates\quotation-template.md
+       1 # Báo giá dịch vụ
+       2 
+       3 **Khách hàng:** [Tên khách hàng/công ty]
+       4 **Dự án/Chiến dịch:** [Tên dự án]
+       5 **Ngày báo giá:** [dd/mm/yyyy]
+         á]
+       7 
+       8 ---
+       9 
+      10 ## Chi tiết hạng mục
+     … +25 lines (ctrl+o to expand)
+
+● Write(.claude\skills\proposal-generator\templates\email-template.md)
+  ⎿  Wrote 47 lines to
+     .claude\skills\proposal-generator\templates\email-template.md
+       1 # Template email gửi proposal cho khách hàng
+       2 
+       4 
+       5 ```
+       6 Tiêu đề: Proposal Digital Marketing cho [Tên công ty khách hàng]
+       8 Chào anh/chị [Tên khách hàng],
+       9 
+      10 Cảm ơn anh/chị đã dành thời gian trao đổi với em về nhu cầu mark
+         m xin gửi anh/chị bản proposal đề xuất chiến lược và kế hoạch tr
+         iển khai chi tiết.
+     … +49 lines (ctrl+o to expand)
+
+● Write(.claude\skills\proposal-generator\checklist\qa-checklist.md)
+  ⎿  Wrote 22 lines to
+     .claude\skills\proposal-generator\checklist\qa-checklist.md
+       1 # QA Checklist — Proposal Digital Marketing
+       2 
+       3 Trước khi gửi proposal cho khách hàng, kiểm tra đủ các mục sau:
+       5 ## Nội dung bắt buộc
+       6 
+       7 - [ ] Đủ mục tiêu (mục tiêu tổng thể + mục tiêu cụ thể, đo lường
+          được)
+       8 - [ ] Đủ KPI (gắn với mục tiêu, có con số cụ thể)
+      10 - [ ] Có ngân sách (tổng ngân sách và/hoặc phân bổ theo hạng mục
+         )
+     … +15 lines (ctrl+o to expand)
+
+● Write(.claude\skills\proposal-generator\docs\proposal-guide.md)
+  ⎿  Wrote 30 lines to
+     .claude\skills\proposal-generator\docs\proposal-guide.md
+      1 # Hướng dẫn xây dựng proposal Digital Marketing chuyên nghiệp
+      3 ## Nguyên tắc chung
+      4 
+      5 - **Bắt đầu từ vấn đề của khách hàng**, không bắt đầu từ dịch vụ 
+        hiện trạng và nỗi đau của khách hàng trước khi đề xuất giải pháp.
+      6 - **Mục tiêu và KPI phải SMART** (Specific - Measurable - Achieva
+        g trưởng doanh thu" mà không có con số hoặc mốc thời gian.
+      7 - **Chiến lược phải nối liền với mục tiêu**: mỗi kênh/hoạt động đ
+        ề xuất trong phần chiến lược và kế hoạch quảng cáo cần giải thích
+      8 - **Ngân sách và deliverables phải nhất quán**: số tiền đề x
+     … +37 lines (ctrl+o to expand)
+
+● Cuối cùng là ví dụ proposal hoàn chỉnh.
+
+● Write(.claude\skills\proposal-generator\examples\sample-proposal.md)
+  ⎿  Wrote 81 lines to
+     .claude\skills\proposal-generator\examples\sample-proposal.md
+       1 # Proposal Digital Marketing
+       2 
+       3 **Khách hàng:** Công ty TNHH Mỹ phẩm XYZ
+       4 **Dự án/Chiến dịch:** Ra mắt dòng sản phẩm chăm sóc da mới quý 3
+         /2026
+       6 **Người phụ trách:** Minh Nguyễn
+       7 
+       8 ---
+       9 
+      10 ## 1. Thông tin khách hàng
+     … +96 lines (ctrl+o to expand)
+
+● Giờ mình tự kiểm tra lại toàn bộ Skill vừa tạo.
+
+  Searched for 1 pattern (ctrl+o to expand)
+● Cấu trúc file đúng yêu cầu, đủ 7 file. Đã tự đánh giá theo 5 tiêu chí giống
+  lần review trước và áp dụng ngay từ đầu:
+
+  - SKILL.md: có frontmatter (name, description), nêu rõ khi nào dùng, hướng dẫn
+  đọc từng loại tài nguyên, và có mục "Quy trình gợi ý" 6 bước nối các file
+  thành luồng làm việc hoàn chỉnh + lưu ý văn phong.
+  - proposal-template.md: đủ 10 phần theo yêu cầu (thông tin khách hàng → phân
+  tích hiện trạng → mục tiêu → đối tượng → chiến lược → kế hoạch quảng cáo → KPI
+  → timeline → ngân sách → deliverables), có CTA ở cuối.
+  - quotation-template.md: đủ hạng mục, chi phí, ghi chú, điều khoản thanh toán.
+  - email-template.md: có 2 phiên bản (gửi lần đầu + follow-up), có CTA rõ ràng.
+  - qa-checklist.md: đủ các mục người dùng yêu cầu (mục tiêu, KPI, timeline,
+  ngân sách, CTA, không placeholder, chính tả), mở rộng thêm kiểm tra khớp số
+  liệu với báo giá và thông tin khách hàng.
+  - proposal-guide.md: hướng dẫn nguyên tắc, cấu trúc thuyết phục, lỗi thường
+  gặp.
+  - sample-proposal.md: ví dụ hoàn chỉnh, số liệu nhất quán với các phần trong
+  proposal-template.
+
+  Không phát hiện thiếu sót nào cần sửa thêm. Dừng lại tại đây.
+
+✻ Cooked for 2m 26s
+
+※ recap: Building a Claude Code marketing workspace with two skills done: ads-report and proposal-generator, both reviewed and complete. Next: let me know what skill or task to tackle next. (disable recaps in /config)
+
+❯ Hãy tạo Skill thứ ba cho workspace.                                           
+                                                                                
+  Tên Skill:                                                                    
+  client-reply                                                                  
+                                                                                
+  Đường dẫn:                                                                    
+                                                                                
+  .claude/                                                                      
+  └── skills/                                                                   
+      └── client-reply/                                                         
+                                                                                
+  Tạo đầy đủ cấu trúc:                                                          
+                                                                                
+  client-reply/                                                                 
+  ├── SKILL.md                                                                  
+  ├── templates/                                                                
+  │   ├── report-reply.md                                                       
+  │   ├── follow-up.md                                                          
+  │   ├── reminder.md                                                           
+  │   ├── proposal-email.md                                                     
+  │   └── budget-reminder.md                                                    
+  ├── checklist/                                                                
+  │   └── qa-checklist.md                                                       
+  ├── examples/                                                                 
+  │   ├── sample-report-reply.md                                                
+  │   └── sample-follow-up.md                                                   
+  └── docs/                                                                     
+      ├── tone-of-voice.md                                                      
+      └── git-cli.md                                                            
+                                                                                
+  Yêu cầu:                                                                      
+                                                                                
+  1. SKILL.md                                                                   
+  - Viết bằng tiếng Việt.                                                       
+  - Có frontmatter (name, description).                                         
+  - Mô tả mục đích của Skill.                                                   
+  - Giải thích khi nào nên sử dụng.                                             
+  - Có quy trình làm việc từng bước.                                            
+  - Hướng dẫn Claude đọc các file trong templates, docs, checklist và examples  
+  khi cần.                                                                      
+                                                                                
+  2. report-reply.md                                                            
+  Template trả lời khách sau khi gửi báo cáo quảng cáo.                         
+                                                                                
+  3. follow-up.md                                                               
+  Template nhắc khách phản hồi khi chưa trả lời sau vài ngày.                   
+                                                                                
+  4. reminder.md                                                                
+  Template nhắc khách bổ sung thông tin hoặc tài liệu.                          
+                                                                                
+  5. proposal-email.md                                                          
+  Template gửi proposal và báo giá.                                             
+                                                                                
+  6. budget-reminder.md                                                         
+  Template nhắc khách nạp thêm ngân sách quảng cáo.                             
+                                                                                
+  7. qa-checklist.md                                                            
+  Checklist kiểm tra:                                                           
+  - Giọng văn lịch sự                                                           
+  - Chuyên nghiệp                                                               
+  - Không đổ lỗi                                                                
+  - Có hướng xử lý                                                              
+  - Có CTA cuối                                                                 
+  - Không sai chính tả                                                          
+                                                                                
+  8. sample-report-reply.md                                                     
+  Ví dụ trả lời khách sau khi gửi báo cáo.                                      
+                                                                                
+  9. sample-follow-up.md                                                        
+  Ví dụ follow-up khách chưa phản hồi.                                          
+                                                                                
+  10. tone-of-voice.md                                                          
+  Hướng dẫn phong cách giao tiếp:                                               
+  - Chuyên nghiệp                                                               
+  - Thân thiện                                                                  
+  - Chủ động                                                                    
+  - Không hứa hẹn quá mức                                                       
+  - Luôn đưa ra hướng xử lý                                                     
+                                                                                
+  11. git-cli.md                                                                
+                                                                                
+  Mô tả cách Skill có thể sử dụng Git CLI khi người dùng yêu cầu lưu kết quả    
+  làm việc.                                                                     
+                                                                                
+  Bao gồm hướng dẫn các lệnh:                                                   
+                                                                                
+  - git status                                                                  
+  - git add                                                                     
+  - git commit                                                                  
+  - git push                                                                    
+                                                                                
+  Lưu ý:                                                                        
+  Skill KHÔNG tự động chạy Git CLI.                                             
+  Chỉ hướng dẫn và sử dụng khi người dùng yêu cầu lưu hoặc quản lý kết quả bằng 
+  Git.                                                                          
+                                                                                
+  Sau khi hoàn thành hãy tự kiểm tra toàn bộ Skill, cập nhật nếu cần rồi dừng   
+  lại.                                                                          
+
+  Ran 1 shell command (ctrl+o to expand)
+
+● Write(.claude\skills\client-reply\SKILL.md)
+  ⎿  Wrote 56 lines to .claude\skills\client-reply\SKILL.md
+       1 ---
+       3 description: Hỗ trợ soạn tin nhắn/email trả lời khách hàng trong
+          các tình huống thường gặp (sau khi gửi báo cáo, nhắc phản hồi, 
+          quảng cáo) với giọng văn chuyên nghiệp, lịch sự, chủ động. Dùng
+         cần lưu kết quả làm việc bằng Git khi được yêu cầu.
+       4 ---
+       6 # Client Reply
+       7 
+       9 
+         ch hàng thường gặp trong công việc Digital Marketing, đảm bảo:
+     … +80 lines (ctrl+o to expand)
+
+● Giờ mình tạo 5 template.
+
+● Write(.claude\skills\client-reply\templates\report-reply.md)
+  ⎿  Wrote 29 lines to
+     .claude\skills\client-reply\templates\report-reply.md
+       1 # Template trả lời khách sau khi gửi báo cáo
+       3 ## Phiên bản kết quả tốt
+       4 
+       5 ```
+       7 
+       8 Em vừa gửi anh/chị báo cáo hiệu quả quảng cáo giai đoạn [dd/mm -
+         R và Conversion Rate đều cải thiện so với kỳ trước].
+       9 
+      10 Em đã đề xuất một số hướng tối ưu thêm trong báo cáo, anh/chị xe
+         riển khai ngay trong tuần này.
+     … +28 lines (ctrl+o to expand)
+
+● Write(.claude\skills\client-reply\templates\follow-up.md)
+  ⎿  Wrote 33 lines to .claude\skills\client-reply\templates\follow-up.md
+       1 # Template nhắc khách phản hồi (follow-up)
+       2 
+       4 
+       5 ```
+       6 Chào anh/chị [Tên khách hàng],
+       8 Em xin phép nhắc lại về [nội dung đã gửi trước đó — báo cáo/prop
+         osal/tài liệu] em đã gửi anh/chị vào [ngày gửi trước]. Không biế
+         t anh/chị đã có thời gian xem qua chưa ạ?
+      10 Nếu anh/chị cần em hỗ trợ giải thích thêm phần nào, em luôn sẵn 
+         sàng trao đổi trực tiếp hoặc qua call.
+     … +33 lines (ctrl+o to expand)
+
+● Write(.claude\skills\client-reply\templates\reminder.md)
+  ⎿  Wrote 22 lines to .claude\skills\client-reply\templates\reminder.md
+       1 # Template nhắc khách bổ sung thông tin/tài liệu
+       2 
+       3 ```
+       5 
+       6 Để em có thể tiếp tục [công việc liên quan, ví dụ: setup chiến d
+         ịch quảng cáo/hoàn thiện proposal], em cần anh/chị hỗ trợ bổ sun
+         g thêm một số thông tin/tài liệu sau:
+       7 
+       9 - [Thông tin/tài liệu 2]
+      10 - [Thông tin/tài liệu 3]
+     … +18 lines (ctrl+o to expand)
+
+● Write(.claude\skills\client-reply\templates\proposal-email.md)
+  ⎿  Wrote 28 lines to
+     .claude\skills\client-reply\templates\proposal-email.md
+       1 # Template gửi proposal và báo giá
+       2 
+       3 ```
+         hách hàng]
+       5 
+       6 Chào anh/chị [Tên khách hàng],
+       7 
+       8 Cảm ơn anh/chị đã dành thời gian trao đổi về nhu cầu marketing c
+       9 
+      10 1. Proposal đề xuất chiến lược và kế hoạch triển khai chi tiết.
+     … +23 lines (ctrl+o to expand)
+
+● Write(.claude\skills\client-reply\templates\budget-reminder.md)
+  ⎿  Wrote 25 lines to
+     .claude\skills\client-reply\templates\budget-reminder.md
+       1 # Template nhắc khách nạp thêm ngân sách quảng cáo
+       2 
+       3 ```
+       4 Chào anh/chị [Tên khách hàng],
+       5 
+          công ty/chiến dịch]:
+       7 
+       8 - Ngân sách hiện còn: [số tiền]
+       9 - Dự kiến hết ngân sách vào: [ngày dự kiến]
+      10 - Tốc độ tiêu ngân sách trung bình: [số tiền/ngày]
+     … +24 lines (ctrl+o to expand)
+
+● Giờ đến checklist, tone-of-voice và git-cli.
+
+● Write(.claude\skills\client-reply\checklist\qa-checklist.md)
+  ⎿  Wrote 12 lines to
+     .claude\skills\client-reply\checklist\qa-checklist.md
+       1 # QA Checklist — Tin nhắn/Email gửi khách hàng
+       2 
+       3 Trước khi gửi tin nhắn/email cho khách hàng, kiểm tra đủ các mục
+          sau:
+       4 
+       6 - [ ] Chuyên nghiệp
+       7 - [ ] Không đổ lỗi (cho khách hàng, hệ thống, hay bên thứ ba)
+       8 - [ ] Có hướng xử lý cụ thể (không chỉ nêu vấn đề)
+       9 - [ ] Có CTA cuối (hành động tiếp theo rõ ràng)
+      10 - [ ] Không sai chính tả
+     … +3 lines (ctrl+o to expand)
+
+● Write(.claude\skills\client-reply\docs\tone-of-voice.md)
+  ⎿  Wrote 35 lines to .claude\skills\client-reply\docs\tone-of-voice.md
+      1 # Hướng dẫn phong cách giao tiếp với khách hàng
+      2 
+      3 Khi soạn tin nhắn/email gửi khách hàng, giữ đúng 5 nguyên tắc sau
+      4 
+      5 ## 1. Chuyên nghiệp
+      6 
+      7 - Dùng ngôn ngữ trang trọng vừa phải, đúng chính tả và ngữ pháp.
+      8 - Trình bày rõ ràng, có cấu trúc (không viết dồn thành một đoạn d
+      9 - Xưng hô đúng mực với khách hàng (anh/chị), tránh suồng sã quá m
+        ức.
+     … +36 lines (ctrl+o to expand)
+
+● Write(.claude\skills\client-reply\docs\git-cli.md)
+  ⎿  Wrote 59 lines to .claude\skills\client-reply\docs\git-cli.md
+       1 # Hướng dẫn dùng Git CLI để lưu kết quả làm việc
+       3 ## Nguyên tắc quan trọng
+       4 
+       6 - Chỉ sử dụng các lệnh Git khi **người dùng chủ động yêu cầu** l
+         , "commit file này", "đẩy lên repo").
+       7 - Không tự ý commit hoặc push khi người dùng chỉ đang nhờ soạn n
+         g Git.
+       8 - Trước khi chạy các lệnh có ảnh hưởng đến remote (`git push`), 
+         n.
+      10 ## Các lệnh cơ bản
+     … +61 lines (ctrl+o to expand)
+
+● Giờ mình tạo 2 file ví dụ.
+
+● Write(.claude\skills\client-reply\examples\sample-report-reply.md)
+  ⎿  Wrote 14 lines to
+     .claude\skills\client-reply\examples\sample-report-reply.md
+       1 # Ví dụ: Trả lời khách sau khi gửi báo cáo
+       3 ```
+       5 
+          01/06 - 30/06/2026. Tóm tắt nhanh: CTR tăng từ 1,52% lên 1,85%,
+         n phẩm mới hoạt động hiệu quả.
+       7 
+         ợng "Nữ 28-40 tuổi, quan tâm nội thất & nhà đẹp" vì đang mang lạ
+          điều chỉnh ngân sách ngay trong tuần này để không bỏ lỡ đà tăng
+       9 
+          đổi thêm ạ.
+     … +11 lines (ctrl+o to expand)
+
+● Write(.claude\skills\client-reply\examples\sample-follow-up.md)
+  ⎿  Wrote 15 lines to
+     .claude\skills\client-reply\examples\sample-follow-up.md
+       1 # Ví dụ: Follow-up khách chưa phản hồi
+       3 ```
+       4 Chào anh Tuấn,
+       6 Em xin phép nhắc lại về proposal Digital Marketing em đã gửi anh
+         a ạ?
+       7 
+         sách trong proposal, em luôn sẵn sàng trao đổi trực tiếp hoặc qu
+         a call để anh nắm rõ hơn.
+      10 Vì kế hoạch triển khai dự kiến bắt đầu từ 15/07/2026, em mong nh
+         c bước tiếp theo.
+     … +10 lines (ctrl+o to expand)
+
+● Giờ mình tự kiểm tra lại toàn bộ Skill vừa tạo.
+
+  Searched for 1 pattern (ctrl+o to expand)
+
+● Kiểm tra đủ 11 file theo đúng cấu trúc yêu cầu. Rà lại theo cùng tiêu chuẩn đã
+  áp dụng cho 2 Skill trước, mình bổ sung thêm một số mục QA thực tế vào
+  checklist để nhất quán chất lượng giữa các Skill trong workspace (vẫn giữ
+  nguyên 6 mục gốc người dùng yêu cầu).
+
+● Update(.claude\skills\client-reply\checklist\qa-checklist.md)
+  ⎿  Added 9 lines
+      2  
+      3  Trước khi gửi tin nhắn/email cho khách hàng, kiểm tra đủ các mục
+          sau:
+      4  
+      5 +## Nội dung bắt buộc                                            
+      6 +                                                                
+      7  - [ ] Giọng văn lịch sự
+      8  - [ ] Chuyên nghiệp
+      9  - [ ] Không đổ lỗi (cho khách hàng, hệ thống, hay bên thứ ba)
+     ...
+      11  - [ ] Có CTA cuối (hành động tiếp theo rõ ràng)
+      12  - [ ] Không sai chính tả
+      13  
+      14 +## Kiểm tra chất lượng bổ sung                                 
+      15 +                                                               
+      16 +- [ ] Không còn placeholder dạng [...] chưa được điền          
+      17 +- [ ] Tên khách hàng, ngày tháng, số liệu chính xác, không nhầm
+         + lẫn giữa các khách hàng                                       
+      18 +- [ ] Không hứa hẹn kết quả/thời gian xử lý khi chưa có cơ sở c
+         +hắc chắn                                                       
+      19 +- [ ] Độ dài phù hợp với kênh gửi (chat/Zalo ngắn gọn, email có
+         + thể chi tiết hơn)                                             
+      20 +                                                               
+      21  Nếu thiếu bất kỳ mục nào, chỉnh sửa lại nội dung trước khi gửi.
+
+● Đã tạo và tự kiểm tra xong Skill client-reply:
+
+  .claude/skills/client-reply/
+  ├── SKILL.md
+  ├── templates/
+  │   ├── report-reply.md
+  │   ├── follow-up.md
+  │   ├── reminder.md
+  │   ├── proposal-email.md
+  │   └── budget-reminder.md
+  ├── checklist/
+  │   └── qa-checklist.md
+  ├── examples/
+  │   ├── sample-report-reply.md
+  │   └── sample-follow-up.md
+  └── docs/
+      ├── tone-of-voice.md
+      └── git-cli.md
+
+  Điểm đáng chú ý sau khi tự rà soát:
+
+  - SKILL.md: có frontmatter, mục đích, khi nào dùng, quy trình 5 bước, và mục
+  riêng nhắc rằng git-cli.md chỉ dùng khi người dùng yêu cầu lưu kết quả.
+  - 5 template: mỗi tình huống đều có phiên bản phù hợp (report-reply có cả 2
+  kịch bản tốt/chưa đạt kỳ vọng; follow-up có 2 mức độ nhắc nhở; reminder,
+  proposal-email, budget-reminder đều có phần "Lưu ý khi sử dụng").
+  - qa-checklist.md: giữ đúng 6 mục người dùng yêu cầu, bổ sung thêm nhóm "Kiểm
+  tra chất lượng bổ sung" (không sót placeholder, không nhầm tên khách, không
+  hứa hẹn thiếu cơ sở, độ dài phù hợp kênh gửi) để nhất quán với 2 Skill trước.
+  - tone-of-voice.md: bao quát đủ 5 nguyên tắc yêu cầu (chuyên nghiệp, thân
+  thiện, chủ động, không hứa hẹn quá mức, luôn có hướng xử lý) và thêm hướng dẫn
+  xử lý tình huống nhạy cảm.
+  - git-cli.md: nêu rõ không tự động chạy Git, chỉ dùng khi được yêu cầu; hướng
+  dẫn đủ 4 lệnh (status, add, commit, push) kèm quy trình gợi ý và lưu ý xác
+  nhận trước khi push.
+  - 2 file ví dụ: minh hoạ cụ thể, số liệu/thông tin nhất quán với các Skill
+  trước đó trong workspace.
+
+  Không phát hiện thiếu sót nào cần sửa thêm. Dừng lại tại đây.
+
+✻ Worked for 2m 48s
+※ recap: Đã khởi tạo xong workspace Claude Code cho Digital Marketing với 3 Skill: ads-report, proposal-generator, và client-reply, đều đã tự kiểm tra và hoàn thiện. Đang chờ bạn xác nhận hoặc yêu cầu Skill tiếp theo.
+
+❯ Sử dụng Skill ads-report.                                                     
+                                                                                
+  Giả lập dữ liệu chiến dịch Google Ads:                                        
+                                                                                
+  Ngân sách: 30.000.000 VNĐ                                                     
+  Impressions: 180.000                                                          
+  Clicks: 4.200                                                                 
+  CTR: 2.33%                                                                    
+  CPC: 7.143 VNĐ                                                                
+  Leads: 135                                                                    
+  CPL: 222.000 VNĐ                                                              
+                                                                                
+  Thực hiện đầy đủ quy trình của Skill.                                         
+                                                                                
+  Tạo:                                                                          
+  - Báo cáo tổng quan                                                           
+  - Phân tích chỉ số                                                            
+  - Insight                                                                     
+  - Recommendation                                                              
+  - Nội dung gửi khách                                                          
+                                                                                
+  Lưu file vào:                                                                 
+                                                                                
+  outputs/reports/sample-google-ads-report.md                                   
+                                                                                
+  Sau khi hoàn thành tự kiểm tra bằng checklist của Skill trước khi kết thúc.   
+
+  Ran 1 shell command (ctrl+o to expand)
+
+● Write(outputs\reports\sample-google-ads-report.md)
+  ⎿  Wrote 82 lines to outputs\reports\sample-google-ads-report.md
+       1 # Báo cáo hiệu quả quảng cáo
+       2 
+       3 **Khách hàng:** [Tên khách hàng]
+       4 **Kênh:** Google Ads (Search — Lead Generation)
+       5 **Giai đoạn báo cáo:** [Kỳ báo cáo hiện tại — chưa có dữ liệu kỳ
+       6 **Người thực hiện:** [Tên người thực hiện]
+       7 
+       8 ---
+       9 
+      10 ## 1. Tổng quan
+     … +135 lines (ctrl+o to expand)
+
+● Đã hoàn thành báo cáo và lưu tại outputs/reports/sample-google-ads-report.md,
+  thực hiện đúng quy trình Skill ads-report: đọc report-template.md để lấy cấu
+  trúc, đối chiếu docs/metrics-guide.md để diễn giải chỉ số đúng ý nghĩa, dùng
+  templates/client-message-template.md để soạn phần gửi khách, và cuối cùng tự
+  kiểm tra bằng checklist/qa-checklist.md.
+
+  Kết quả tự kiểm tra theo checklist:
+
+  Nội dung bắt buộc:
+  - ✅ Có nhận xét CTR, CPC, CPM, Conversion
+  - ✅ Có Recommendation
+  - ✅ Có việc cần triển khai tiếp theo (4 việc, đủ người phụ trách + thời hạn)
+
+  Kiểm tra chất lượng bổ sung:
+  - ✅ Số liệu trong bảng khớp với số liệu nêu ở phần nhận xét/insight
+  - ✅ Đơn vị (đ, %) và định dạng số nhất quán xuyên suốt
+  - ✅ Mỗi việc cần làm tiếp theo có người phụ trách và thời hạn rõ ràng
+  - ⚠️ Còn placeholder chưa điền: [Tên khách hàng], [Tên người thực hiện], [Tên 
+  người gửi], và giai đoạn báo cáo — vì đề bài chỉ cung cấp số liệu chiến dịch,
+  không có tên khách hàng/người thực hiện/mốc thời gian cụ thể, mình để
+  placeholder thay vì tự bịa thông tin không có thật.
+  - N/A: mục "đính kèm file" không áp dụng vì đây là báo cáo text, không có file
+  đính kèm thực tế.
+
+  Ngoài ra, vì đề bài không cung cấp số liệu kỳ trước nên báo cáo được trình bày
+  như kỳ báo cáo đầu tiên (không so sánh xu hướng), đồng thời
+  Reach/Frequency/ROAS được đánh dấu "Không áp dụng" vì không phù hợp với chiến
+  dịch Search lead-gen — mình ghi rõ lý do thay vì bỏ trống khó hiểu.
+
+  Nếu bạn cung cấp tên khách hàng, người thực hiện và giai đoạn báo cáo cụ thể,
+  mình sẽ điền lại các placeholder còn thiếu.
+
+✻ Churned for 1m 48s
+
+❯ Tên khách hàng: Hồng Quân                                                     
+
+  Read 1 file (ctrl+o to expand)
+
+● Update(outputs\reports\sample-google-ads-report.md)
+  ⎿  Added 1 line, removed 1 line
+      1  # Báo cáo hiệu quả quảng cáo
+      2  
+      3 -**Khách hàng:** [Tên khách hàng]                                
+      3 +**Khách hàng:** Hồng Quân                                       
+      4  **Kênh:** Google Ads (Search — Lead Generation)
+      5  **Giai đoạn báo cáo:** [Kỳ báo cáo hiện tại — chưa có dữ liệu kỳ
+          trước để so sánh]
+      6  **Người thực hiện:** [Tên người thực hiện]
+
+● Update(outputs\reports\sample-google-ads-report.md)
+  ⎿  Added 1 line, removed 1 line
+      65  ## Nội dung gửi khách
+      66  
+      67  ```
+      68 -Chào anh/chị [Tên khách hàng],                                 
+      68 +Chào anh Hồng Quân,                                            
+      69  
+      70  Em gửi anh/chị báo cáo hiệu quả quảng cáo Google Ads (Search — 
+          Lead Generation) cho giai đoạn vừa qua.
+      71  
+
+● Đã cập nhật tên khách hàng Hồng Quân vào cả phần đầu báo cáo và lời chào trong
+  nội dung gửi khách.
+
+  Còn 2 placeholder chưa điền: [Tên người thực hiện] (đầu báo cáo) và [Tên người
+  gửi] (cuối tin nhắn gửi khách), cùng [Kỳ báo cáo hiện tại...]. Bạn có muốn
+  cung cấp thêm thông tin này không?
+
+✻ Churned for 14s
+
+❯ Giai đoạn: 1 - 30/6/2026                                                      
+
+● Update(outputs\reports\sample-google-ads-report.md)
+  ⎿  Added 1 line, removed 1 line
+      2  
+      3  **Khách hàng:** Hồng Quân
+      4  **Kênh:** Google Ads (Search — Lead Generation)
+      5 -**Giai đoạn báo cáo:** [Kỳ báo cáo hiện tại — chưa có dữ liệu kỳ
+        - trước để so sánh]                                              
+      5 +**Giai đoạn báo cáo:** 01/06/2026 - 30/06/2026 (chưa có dữ liệu 
+        +kỳ trước để so sánh)                                            
+      6  **Người thực hiện:** [Tên người thực hiện]
+      7  
+      8  ---
+
+● Update(outputs\reports\sample-google-ads-report.md)
+  ⎿  Added 1 line, removed 1 line
+      67  ```
+      68  Chào anh Hồng Quân,
+      69  
+      70 -Em gửi anh/chị báo cáo hiệu quả quảng cáo Google Ads (Search — 
+         -Lead Generation) cho giai đoạn vừa qua.                        
+      70 +Em gửi anh báo cáo hiệu quả quảng cáo Google Ads (Search — Lead
+         + Generation) giai đoạn 01/06/2026 - 30/06/2026.                
+      71  
+      72  Tóm tắt nhanh: Chiến dịch đã chi tiêu đúng 30.000.000đ ngân sác
+          h kế hoạch, thu về 135 lead với chi phí trung bình 222.000đ/lea
+          d. CTR đạt 2,33% — ở mức khá tốt cho thấy quảng cáo đang tiếp c
+          ận đúng nhu cầu tìm kiếm của khách hàng tiềm năng.
+      73  
+
+● Đã cập nhật giai đoạn báo cáo 01/06/2026 - 30/06/2026 ở cả phần đầu báo cáo và
+  nội dung gửi khách (đồng thời đổi "anh/chị" thành "anh" trong tin nhắn cho
+  khớp xưng hô với "Hồng Quân").
+
+  Còn lại [Tên người thực hiện] và [Tên người gửi] chưa điền — bạn có muốn cung
+  cấp không?
+
+✻ Sautéed for 12s
+
+※ recap: Bạn đang xây workspace Claude Code cho Digital Marketing với 3 Skill đã hoàn thiện, và vừa điền báo cáo mẫu Google Ads cho khách Hồng Quân, giai đoạn 1-30/6/2026. Còn thiếu tên người thực hiện và tên người gửi để hoàn tất file.
