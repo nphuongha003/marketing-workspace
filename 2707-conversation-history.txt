@@ -1,0 +1,1297 @@
+ ▐▛███▜▌   Claude Code v2.1.220
+▝▜█████▛▘  Sonnet 5 · Claude Pro
+  ▘▘ ▝▝    ~\claude code\marketing-workspace
+
+ ⚠ Your login expires in 1 day · run /login to renew
+
+   Tackle your toughest work with Opus 5. Switch anytime with /model.
+
+❯ Mình muốn tạo một Claude Code Skill mới tên là "google-sheet-reader" trong    
+  workspace hiện tại.                                                           
+                                                                                
+  Yêu cầu:                                                                      
+                                                                                
+  1. Tạo đúng cấu trúc sau:                                                     
+                                                                                
+  .claude/                                                                      
+  └── skills/                                                                   
+      └── google-sheet-reader/                                                  
+          ├── SKILL.md                                                          
+          ├── templates/                                                        
+          │     ├── report-template.md                                          
+          │     └── optimization-template.md                                    
+          ├── checklist/                                                        
+          │     └── data-checklist.md                                           
+          ├── docs/                                                             
+          │     ├── metrics-guide.md                                            
+          │     └── google-sheet-guide.md                                       
+          ├── examples/                                                         
+          │     └── sample-analysis.md                                          
+          └── outputs/                                                          
+                                                                                
+  2. Đây là Skill phục vụ Account Performance Marketing.                        
+                                                                                
+  3. Chức năng của Skill:                                                       
+                                                                                
+  - Đọc dữ liệu từ Google Sheets.                                               
+  - Kiểm tra dữ liệu đầu vào.                                                   
+  - Tóm tắt KPI chính.                                                          
+  - Phân tích hiệu quả chiến dịch quảng cáo.                                    
+  - Đưa ra nhận xét.                                                            
+  - Đề xuất hướng tối ưu.                                                       
+  - Sinh báo cáo Markdown theo template.                                        
+                                                                                
+  4. Chỉ tạo cấu trúc và nội dung các file.                                     
+                                                                                
+  5. Không viết kết nối API thật ở bước này.                                    
+                                                                                
+  6. Nội dung viết bằng tiếng Việt.                                             
+                                                                                
+  7. Không sửa các Skill khác.                                                  
+                                                                                
+  Sau khi hoàn thành thì dừng lại và chờ mình review.                           
+
+● Mình sẽ tạo cấu trúc thư mục và nội dung cho skill "google-sheet-reader" theo
+  đúng yêu cầu.
+
+  Listed 2 directories (ctrl+o to expand)
+
+● Không liên quan đến yêu cầu hiện tại (đây chỉ là tạo skill, không phải gọi API
+  thật). Mình sẽ tiếp tục tạo cấu trúc thư mục và nội dung file.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+● Giờ tạo nội dung từng file. Bắt đầu với SKILL.md.
+
+● Write(~\claude code\.claude\skills\google-sheet-reader\SKILL.md)
+  ⎿  Wrote 112 lines to ..\.claude\skills\google-sheet-reader\SKILL.md
+       1 ---
+       3 description: Đọc và phân tích dữ liệu hiệu suất quảng cáo từ Goo
+          dùng cần kiểm tra dữ liệu đầu vào, tóm tắt KPI, phân tích hiệu 
+          hoặc sinh báo cáo Markdown từ dữ liệu Google Sheets (ví dụ Face
+         như "đọc Google Sheet", "phân tích hiệu suất quảng cáo", "báo cá
+         o KPI", "tối ưu chiến dịch".
+       5 
+       7 
+       9 
+          việc:
+     … +143 lines (ctrl+o to expand)
+
+● Write(~\claude
+       code\.claude\skills\google-sheet-reader\docs\google-sheet-guide.md)
+  ⎿  Wrote 56 lines to
+     ..\.claude\skills\google-sheet-reader\docs\google-sheet-guide.md
+      1 # Hướng dẫn đọc cấu trúc Google Sheet (Account Performance Market
+        ing)
+      3 > Tài liệu này mô tả cách tổ chức và diễn giải dữ liệu từ Google 
+        Sheets phục vụ phân tích hiệu suất
+      4 > quảng cáo. Ở giai đoạn hiện tại, skill **không** kết nối API th
+      5 > dưới dạng dán bảng, mô tả, hoặc file export.
+      6 
+      7 ## 1. Cách tiếp nhận dữ liệu (thủ công)
+      9 Vì chưa có kết nối API, dữ liệu có thể được cung cấp theo một tro
+        ng các hình thức sau:
+     … +79 lines (ctrl+o to expand)
+
+● Write(~\claude code\.claude\skills\google-sheet-reader\docs\metrics-guide.md)
+  ⎿  Wrote 57 lines to
+     ..\.claude\skills\google-sheet-reader\docs\metrics-guide.md
+       1 # Hướng dẫn định nghĩa & công thức KPI (Performance Marketing)
+       2 
+          hiệu suất quảng cáo, kèm công thức
+       4 tính toán để đảm bảo tính nhất quán khi tóm tắt và phân tích dữ 
+         liệu.
+       6 ## 1. Nhóm chỉ số về chi phí & quy mô
+       7 
+       8 | Chỉ số | Tên đầy đủ | Công thức | Ý nghĩa |
+      10 | Spend | Tổng chi phí | Tổng cộng dồn cột chi phí | Tổng ngân s
+         ách đã chi trong kỳ |
+     … +74 lines (ctrl+o to expand)
+
+● Write(~\claude
+       code\.claude\skills\google-sheet-reader\checklist\data-checklist.md)
+  ⎿  Wrote 56 lines to
+     ..\.claude\skills\google-sheet-reader\checklist\data-checklist.md
+       1 # Checklist kiểm tra dữ liệu đầu vào
+       3 Sử dụng checklist này ở **Bước 2** của quy trình (xem `SKILL.md`
+         ) trước khi tiến hành tóm tắt KPI
+       4 và phân tích. Mục tiêu là đảm bảo dữ liệu đủ tin cậy trước khi đ
+       5 
+       6 ## 1. Kiểm tra cấu trúc dữ liệu
+       8 - [ ] Đã xác định được toàn bộ tên cột trong dữ liệu gốc.
+       9 - [ ] Đã ánh xạ (mapping) các cột về nhóm chuẩn theo `docs/googl
+         e-sheet-guide.md`.
+         kết thúc) với người dùng.
+     … +67 lines (ctrl+o to expand)
+
+● Write(~\claude
+       code\.claude\skills\google-sheet-reader\templates\report-template.md)
+  ⎿  Wrote 84 lines to
+     ..\.claude\skills\google-sheet-reader\templates\report-template.md
+       1 # Báo Cáo Hiệu Suất Chiến Dịch Quảng Cáo
+       2 
+       3 - **Tài khoản/Khách hàng:** [Tên tài khoản]
+         iến dịch]
+       5 - **Kênh quảng cáo:** [Facebook Ads / Google Ads / TikTok Ads / 
+         Đa kênh]
+       6 - **Khoảng thời gian:** [Từ ngày] — [Đến ngày]
+       8 - **Người thực hiện:** [Tên/Team]
+       9 
+      10 ---
+     … +81 lines (ctrl+o to expand)
+
+● Write(~\claude code\.claude\skills\google-sheet-reader\templates\optimization-
+       template.md)
+  ⎿  Wrote 58 lines to ..\.claude\skills\google-sheet-reader\templates\opti
+     mization-template.md
+       1 # Khung Đề Xuất Tối Ưu Chiến Dịch Quảng Cáo
+       2 
+       3 Dùng khung này ở **Bước 6** của quy trình (`SKILL.md`) để xây dự
+       4 tránh đưa ra nhận định chung chung không dựa trên dữ liệu.
+       5 
+       6 ## Nguyên tắc chung khi đề xuất
+       7 
+         dụ: "CPA nhóm A tăng 40% trong 7 ngày qua").
+       9 2. Phân loại mức độ ưu tiên: **Cao / Trung bình / Thấp**.
+      10 3. Nêu rõ **kết quả kỳ vọng** nếu áp dụng đề xuất.
+     … +65 lines (ctrl+o to expand)
+
+● Cuối cùng là file ví dụ hoàn chỉnh examples/sample-analysis.md.
+
+● Write(~\claude
+       code\.claude\skills\google-sheet-reader\examples\sample-analysis.md)
+  ⎿  Wrote 71 lines to
+     ..\.claude\skills\google-sheet-reader\examples\sample-analysis.md
+       1 # Ví dụ: Phân tích mẫu hiệu suất chiến dịch (Dữ liệu minh họa)
+       3 > Đây là ví dụ minh họa cho toàn bộ quy trình mô tả trong `SKILL
+         .md`, sử dụng dữ liệu giả định
+       4 > để minh họa cách áp dụng checklist, tính KPI, phân tích và đề 
+       5 
+       6 ## Dữ liệu đầu vào (giả định)
+       8 Người dùng cung cấp bảng dữ liệu daily breakdown của 2 chiến dịc
+         h Facebook Ads trong 7 ngày:
+       9 
+         rsions | Revenue (VND) |
+     … +87 lines (ctrl+o to expand)
+
+  Searched for 1 pattern (ctrl+o to expand)
+
+● Đã tạo xong đầy đủ cấu trúc và nội dung cho skill google-sheet-reader, đúng
+  như yêu cầu:
+
+  .claude/skills/google-sheet-reader/
+  ├── SKILL.md                          ✓ Quy trình 7 bước, không kết nối API
+  thật
+  ├── templates/
+  │   ├── report-template.md            ✓ Khung báo cáo Markdown
+  │   └── optimization-template.md      ✓ Khung đề xuất tối ưu
+  (Budget/Targeting/Creative/Bidding/Landing page)
+  ├── checklist/
+  │   └── data-checklist.md             ✓ Checklist kiểm tra dữ liệu đầu vào
+  ├── docs/
+  │   ├── metrics-guide.md              ✓ Công thức KPI (CTR, CPC, CPM, CPA,
+  ROAS...)
+  │   └── google-sheet-guide.md         ✓ Hướng dẫn ánh xạ cột dữ liệu Google
+  Sheet (thủ công)
+  ├── examples/
+  │   └── sample-analysis.md            ✓ Ví dụ phân tích mẫu hoàn chỉnh (dữ
+  liệu giả định)
+  └── outputs/                          ✓ Thư mục trống, chờ báo cáo được sinh
+  ra
+
+  Toàn bộ nội dung bằng tiếng Việt, không có code kết nối API thật, không đụng
+  đến skill nào khác. Mình dừng lại ở đây để bạn review.
+
+✻ Crunched for 3m 12s
+
+※ recap: Created the full google-sheet-reader Claude Code skill for Account Performance Marketing, with all files and Vietnamese content in place per your spec. It's ready for your review now. (disable recaps in /config)
+
+❯ Mình muốn tạo một Google Sheets Tool thật cho Claude Code.                    
+                                                                                
+  Mục tiêu:                                                                     
+  - Claude có thể kết nối với Google Sheets.                                    
+  - Đọc dữ liệu từ một Google Sheet được chia sẻ.                               
+  - Trả dữ liệu dạng bảng để các Skill khác (google-sheet-reader,               
+  ads-report...) sử dụng.                                                       
+  - Chưa cần ghi dữ liệu trở lại Google Sheets ở bước này.                      
+                                                                                
+  Yêu cầu:                                                                      
+                                                                                
+  1. Kiểm tra xem Claude Code hiện tại hỗ trợ cách kết nối Google Sheets nào:   
+  - MCP                                                                         
+  - Google Sheets API                                                           
+  - Hoặc phương án chính thức khác.                                             
+                                                                                
+  2. Chọn phương án phù hợp nhất với Claude Code hiện nay.                      
+                                                                                
+  3. Tạo đầy đủ cấu trúc Tool cần thiết.                                        
+                                                                                
+  4. Hướng dẫn từng bước:                                                       
+  - Cần tạo gì trên Google Cloud.                                               
+  - Cần bật API nào.                                                            
+  - Cần lấy credentials nào.                                                    
+  - Cần chia sẻ Google Sheet như thế nào.                                       
+  - Cần cấu hình Claude Code ra sao.                                            
+                                                                                
+  5. Sau khi cấu hình xong hãy tạo một ví dụ sử dụng:                           
+                                                                                
+  Đọc Google Sheet                                                              
+  ↓                                                                             
+                                                                                
+  Hiển thị dữ liệu                                                              
+                                                                                
+  ↓                                                                             
+                                                                                
+  Tóm tắt dữ liệu                                                               
+                                                                                
+  ↓                                                                             
+                                                                                
+  Phân tích KPI                                                                 
+                                                                                
+  6. Không giả lập.                                                             
+  Mình muốn dùng Google Sheets thật.                                            
+                                                                                
+  Sau khi phân tích xong thì dừng lại và chờ mình xác nhận trước khi tạo bất kỳ 
+  file nào.                                                                     
+
+● 1. Claude Code hiện hỗ trợ những cách nào để nối Google Sheets
+
+  a) Connector "Google Drive" cấp tài khoản (đã có sẵn trong phiên này)
+  Tôi thấy phiên hiện tại đã có sẵn các tool mcp__claude_ai_Google_Drive__*
+  (search_files, read_file_content, download_file_content, get_file_metadata,
+  list_recent_files...). Đây là connector Google Drive gắn với tài khoản
+  claude.ai/Claude Desktop đã đăng nhập, không phải thứ bạn cấu hình trong 
+  project. Đã kiểm tra kỹ khả năng đọc Sheet của nó:
+
+  - read_file_content với file application/vnd.google-apps.spreadsheet → trả về
+  "natural language representation", không đảm bảo cấu trúc bảng, và "có thể 
+  không đầy đủ với file lớn" — không đáng tin cho việc tính KPI chính xác.
+  - download_file_content với exportMimeType=text/csv → export CSV, nhưng giới
+  hạn của Google Drive export API là chỉ lấy được tab/sheet đầu tiên, không chọn
+  được range hay tab cụ thể.
+  - Gắn với tài khoản Google cá nhân đã kết nối, không cấu hình được qua file 
+  trong repo → người khác dùng lại project sẽ không tái tạo được, không phải
+  "Tool" theo đúng nghĩa hạ tầng dự án.
+
+  → Dùng được cho việc "liếc nhanh" nhưng không đủ tin cậy làm nguồn dữ liệu
+  thật cho phân tích KPI của nhiều Skill.
+
+  b) MCP (Model Context Protocol) — cơ chế chính thức của Claude Code
+  Claude Code hỗ trợ chính thức việc thêm tool mới qua MCP server, cấu hình qua
+  claude mcp add hoặc file .mcp.json (project scope, commit được vào repo để cả
+  team dùng chung). Đây là cách "đúng chuẩn" để cấp cho Claude một tool thật, có
+  schema rõ ràng, không phụ thuộc tài khoản cá nhân.
+
+  c) Gọi thẳng Google Sheets API qua script (Bash), không qua MCP
+  Vẫn khả thi (viết 1 script Python/Node dùng Service Account, Claude gọi qua
+  Bash), nhưng kém "tool-like": không có schema input/output, các Skill phải
+  biết đúng cú pháp lệnh, dễ lỗi khi tái sử dụng.
+
+  2. Phương án chọn
+
+  → MCP server riêng cho Google Sheets, backend là Google Sheets API v4, xác 
+  thực bằng Service Account (read-only).
+
+  Lý do:
+  - Là cơ chế mở rộng chính thức của Claude Code, cấu hình qua .mcp.json trong
+  project → tái tạo được cho bất kỳ ai clone repo (chỉ cần tự tạo credentials
+  riêng).
+  - Service Account không cần luồng OAuth qua trình duyệt — chỉ cần share Sheet 
+  với email service account như share với một người dùng bình thường (Viewer).
+  - Trả dữ liệu dạng JSON có cấu trúc (headers + rows) theo đúng sheet/tab +
+  range cụ thể → đúng nhu cầu "các Skill khác dùng lại được".
+  - Đây là dữ liệu thật 100%, không mô phỏng, không phụ thuộc tài khoản cá nhân
+  của ai.
+
+  3. Cấu trúc Tool dự kiến (sẽ tạo sau khi bạn xác nhận)
+
+  mcp-servers/
+  └── google-sheets/
+      ├── package.json                    # hoặc requirements.txt nếu chọn
+  Python
+      ├── src/index.ts                    # hoặc main.py — MCP server
+      ├── credentials/service-account.json  # KHÔNG commit, chỉ máy local
+      ├── .env.example
+      └── README.md
+  .mcp.json           # đăng ký server "google-sheets" với Claude Code (project
+  scope)
+  .gitignore           # thêm credentials/*.json
+
+  Tools mà server sẽ expose:
+  - list_sheet_tabs(spreadsheetId) → danh sách tên tab trong file
+  - read_sheet(spreadsheetId, range?) → { headers: [...], rows: [[...]] } — dữ
+  liệu bảng thật
+  - get_spreadsheet_metadata(spreadsheetId) → tiêu đề, danh sách tab, kích thước
+
+  4. Các bước thiết lập thật (Google Cloud + Claude Code)
+
+  1. Tạo/chọn Google Cloud Project tại console.cloud.google.com.
+  2. Bật API: APIs & Services → Enable APIs → tìm "Google Sheets API" → Enable.
+  3. Tạo Service Account: IAM & Admin → Service Accounts → Create → ví dụ tên
+  sheets-reader.
+  4. Tạo Key: chọn service account → Keys → Add Key → JSON → tải file .json (đây
+  là credentials).
+  5. Lấy email service account (dạng xxx@xxx.iam.gserviceaccount.com, có trong
+  file JSON).
+  6. Chia sẻ Google Sheet thật: mở Sheet → Share → dán email service account →
+  quyền Viewer (đủ vì chưa cần ghi).
+  7. Lưu file JSON vào mcp-servers/google-sheets/credentials/, thêm vào
+  .gitignore (không commit bí mật).
+  8. Cài dependencies cho server, đăng ký với Claude Code (claude mcp add hoặc
+  sửa .mcp.json), trỏ biến môi trường tới file credentials.
+  9. Reload Claude Code, kiểm tra claude mcp list thấy server google-sheets
+  connected.
+
+  5. Ví dụ dùng thật (thực hiện sau khi cấu hình xong, cần bạn đưa 1 Sheet ID 
+  thật đã share)
+
+  Đọc Google Sheet (read_sheet) → Hiển thị bảng markdown → Skill
+  google-sheet-reader tóm tắt KPI (theo docs/metrics-guide.md) → Phân tích & đề
+  xuất theo template có sẵn — toàn bộ dựa trên dữ liệu thật lấy được.
+
+  ---
+  Trước khi tạo bất kỳ file nào, mình cần bạn xác nhận vài lựa chọn:
+
+● User declined to answer questions
+  ⎿  · MCP server cho Google Sheets nên viết bằng ngôn ngữ nào? (Node.js / 
+     TypeScript / Python)
+     · Cấu hình MCP server nên ở phạm vi nào? (Project scope (.mcp.json commit 
+     vào repo) / User/local scope (chỉ máy này))
+     · Bạn đã có Google Cloud Project sẵn sàng dùng cho việc này chưa? (Đã có, 
+     sẽ tự làm bước Cloud Console / Chưa có, cần hướng dẫn chi tiết hơn từng 
+     click)
+
+✻ Churned for 11m 50s
+❯ để mình kết nối sau nhé, giờ Mình muốn hoàn thiện Google Sheet Reader thành   
+  một Tool phục vụ demo bài cuối khóa.                                          
+                                                                                
+  Lưu ý:                                                                        
+  - Chưa kết nối Google Sheets API thật.                                        
+  - Chưa sử dụng MCP.                                                           
+  - Tool sẽ mô phỏng quy trình đọc dữ liệu từ Google Sheet bằng cách người dùng 
+  cung cấp dữ liệu CSV/XLSX hoặc bảng dữ liệu đã copy từ Google Sheets.         
+                                                                                
+  Yêu cầu:                                                                      
+                                                                                
+  1. Cập nhật SKILL.md để mô tả đây là Tool mô phỏng Google Sheet Reader.       
+                                                                                
+  2. Trong docs/google-sheet-guide.md:                                          
+  - Viết hướng dẫn sử dụng Tool.                                                
+  - Mô tả dữ liệu đầu vào.                                                      
+  - Mô tả dữ liệu đầu ra.                                                       
+  - Luồng xử lý.                                                                
+                                                                                
+  3. Trong examples/                                                            
+  Tạo thêm:                                                                     
+  sample-google-sheet.csv                                                       
+                                                                                
+  Bao gồm dữ liệu giả lập của chiến dịch Facebook Ads hoặc Google Ads trong 7   
+  ngày.                                                                         
+                                                                                
+  Các cột gồm:                                                                  
+                                                                                
+  Date                                                                          
+  Campaign                                                                      
+  Impressions                                                                   
+  Clicks                                                                        
+  CTR                                                                           
+  CPC                                                                           
+  Spend                                                                         
+  Conversions                                                                   
+  CPA                                                                           
+                                                                                
+  4. Tạo thêm:                                                                  
+                                                                                
+  examples/sample-analysis-result.md                                            
+                                                                                
+  Đây là kết quả khi Tool đọc file CSV trên.                                    
+                                                                                
+  5. Không thay đổi Skill khác.                                                 
+                                                                                
+  6. Dừng lại sau khi hoàn thành.                                               
+
+  Read 1 file (ctrl+o to expand)
+
+● Giờ tôi cập nhật SKILL.md để mô tả rõ đây là Tool mô phỏng (simulated), rồi
+  cập nhật docs/google-sheet-guide.md và tạo 2 file examples mới.
+
+● Update(~\claude code\.claude\skills\google-sheet-reader\SKILL.md)
+  ⎿  Added 16 lines, removed 7 lines
+       1  ---
+       2  name: google-sheet-reader
+       3 -description: Đọc và phân tích dữ liệu hiệu suất quảng cáo từ Go
+         -ogle Sheets phục vụ Account Performance Marketing. Dùng khi ngư
+         -ời dùng cần kiểm tra dữ liệu đầu vào, tóm tắt KPI, phân tích hi
+         -ệu quả chiến dịch quảng cáo, đưa ra nhận xét, đề xuất hướng tối
+         - ưu, hoặc sinh báo cáo Markdown từ dữ liệu Google Sheets (ví dụ
+         - Facebook Ads, Google Ads, TikTok Ads). Kích hoạt khi có các từ
+         - khóa như "đọc Google Sheet", "phân tích hiệu suất quảng cáo", 
+         -"báo cáo KPI", "tối ưu chiến dịch".                            
+       3 +description: Tool MÔ PHỎNG (simulated) đọc và phân tích dữ liệu
+         + hiệu suất quảng cáo từ Google Sheets phục vụ Account Performan
+         +ce Marketing — dùng cho mục đích demo/bài cuối khóa, chưa kết n
+         +ối Google Sheets API thật. Dùng khi người dùng cung cấp dữ liệu
+         + CSV/XLSX hoặc bảng copy từ Google Sheets và cần kiểm tra dữ li
+         +ệu đầu vào, tóm tắt KPI, phân tích hiệu quả chiến dịch quảng cá
+         +o, đưa ra nhận xét, đề xuất hướng tối ưu, hoặc sinh báo cáo Mar
+         +kdown (ví dụ Facebook Ads, Google Ads, TikTok Ads). Kích hoạt k
+         +hi có các từ khóa như "đọc Google Sheet", "phân tích hiệu suất 
+         +quảng cáo", "báo cáo KPI", "tối ưu chiến dịch".                
+       4  ---
+       5  
+       6 -# Google Sheet Reader — Account Performance Marketing          
+       6 +# Google Sheet Reader — Account Performance Marketing (Tool Mô 
+         +Phỏng)                                                         
+       7  
+       8  ## Mục đích
+       9  
+      10 -Skill này hỗ trợ đội ngũ **Account Performance Marketing** tron
+         -g việc:                                                        
+      10 +Đây là một **Tool mô phỏng (simulated tool)**, được xây dựng để
+         + **demo cho bài cuối khóa**, minh họa                          
+      11 +quy trình một Google Sheet Reader thật sẽ vận hành ra sao khi p
+         +hục vụ đội ngũ **Account Performance                           
+      12 +Marketing**. Tool giả lập bước "đọc dữ liệu từ Google Sheets" b
+         +ằng cách nhận dữ liệu do người dùng                            
+      13 +cung cấp trực tiếp (CSV, XLSX, hoặc bảng copy từ Google Sheets)
+         +, sau đó thực hiện toàn bộ pipeline                            
+      14 +xử lý như thể dữ liệu đó vừa được đọc trực tiếp từ một Google S
+         +heet thật:                                                     
+      15  
+      12 -1. Đọc dữ liệu hiệu suất quảng cáo từ Google Sheets.           
+      16 +1. "Đọc" dữ liệu hiệu suất quảng cáo (từ file CSV/XLSX hoặc bản
+         +g người dùng dán vào).                                         
+      17  2. Kiểm tra tính hợp lệ và đầy đủ của dữ liệu đầu vào.
+      18  3. Tóm tắt các chỉ số KPI chính (Spend, Impression, Click, CTR,
+           CPC, CPM, Conversion, CPA, ROAS...).
+      19  4. Phân tích hiệu quả chiến dịch quảng cáo theo thời gian, theo
+           kênh, theo nhóm quảng cáo.
+     ...
+      21  6. Đề xuất hướng tối ưu ngân sách, targeting, creative, bidding
+          .
+      22  7. Sinh báo cáo dạng Markdown theo template có sẵn.
+      23  
+      20 -> **Lưu ý quan trọng:** Ở giai đoạn hiện tại, skill **KHÔNG** t
+         -hực hiện kết nối API thật tới Google Sheets.                   
+      21 -> Toàn bộ luồng xử lý được mô tả dưới dạng quy trình/hướng dẫn 
+         -(workflow) để Claude thực hiện thủ công                        
+      22 -> dựa trên dữ liệu người dùng cung cấp (paste dữ liệu, upload f
+         -ile export, hoặc mô tả bằng lời).                              
+      24 +> **Lưu ý quan trọng — đây là Tool MÔ PHỎNG:**                 
+      25 +> - **KHÔNG** kết nối Google Sheets API thật.                  
+      26 +> - **KHÔNG** dùng MCP (Model Context Protocol) hay bất kỳ kết 
+         +nối tool ngoài nào.                                            
+      27 +> - Bước "đọc Google Sheet" được **mô phỏng** bằng cách người d
+         +ùng cung cấp dữ liệu dưới dạng                                 
+      28 +>   file CSV/XLSX đã export, hoặc bảng dữ liệu đã copy trực tiế
+         +p từ Google Sheets.                                            
+      29 +> - Toàn bộ xử lý phía sau (kiểm tra dữ liệu, tính KPI, phân tí
+         +ch, sinh báo cáo) được Claude thực hiện                        
+      30 +>   thủ công dựa trên dữ liệu văn bản/bảng đó, giống hệt như qu
+         +y trình sẽ áp dụng khi có kết nối thật.                        
+      31 +> - Xem chi tiết hướng dẫn sử dụng, mô tả input/output, và luồn
+         +g xử lý tại `docs/google-sheet-guide.md`.                      
+      32  
+      33  ## Khi nào sử dụng skill này
+      34  
+
+● Update(~\claude code\.claude\skills\google-sheet-reader\SKILL.md)
+  ⎿  Added 10 lines, removed 5 lines
+      109  │   ├── metrics-guide.md              # Hướng dẫn định nghĩa &
+            công thức KPI
+      110  │   └── google-sheet-guide.md         # Hướng dẫn đọc cấu trúc
+            Google Sheet
+      111  ├── examples/
+      112 -│   └── sample-analysis.md            # Ví dụ phân tích mẫu ho
+          -àn chỉnh                                                      
+      112 +│   ├── sample-analysis.md            # Ví dụ phân tích mẫu ho
+          +àn chỉnh (dữ liệu mô tả trong văn bản)                        
+      113 +│   ├── sample-google-sheet.csv        # Dữ liệu mẫu mô phỏng 
+          +một Google Sheet export ra CSV                                
+      114 +│   └── sample-analysis-result.md      # Kết quả đầy đủ khi To
+          +ol "đọc" file CSV mẫu ở trên                                  
+      115  └── outputs/                          # Nơi lưu các báo cáo đư
+           ợc sinh ra
+      116  ```
+      117  
+      116 -## Giới hạn hiện tại                                          
+      118 +## Giới hạn hiện tại (Tool mô phỏng — dùng cho demo/bài cuối k
+          +hóa)                                                          
+      119  
+      118 -- Skill chưa kết nối trực tiếp tới Google Sheets API — người d
+          -ùng cần cung cấp dữ liệu thủ công                             
+      119 -  (dán bảng, mô tả, hoặc upload file export).                 
+      120 -- Không tự động lấy dữ liệu real-time.                        
+      120 +- **Chưa kết nối Google Sheets API thật** — người dùng cần tự 
+          +cung cấp dữ liệu (dán bảng, upload                            
+      121 +  file CSV/XLSX export từ Google Sheets, hoặc mô tả bằng lời).
+      122 +- **Chưa dùng MCP** hay bất kỳ cơ chế kết nối tool ngoài nào —
+          + mọi xử lý diễn ra thủ công trong hội thoại.                  
+      123 +- Không tự động lấy dữ liệu real-time từ Google Sheets.       
+      124  - Không thực hiện thay đổi trực tiếp trên tài khoản quảng cáo 
+           (chỉ phân tích và đề xuất).
+      125 +- Đây là bước mô phỏng quy trình; khi có nhu cầu dùng dữ liệu 
+          +thật theo thời gian thực, cần xây dựng                        
+      126 +  thêm lớp kết nối thật (Google Sheets API hoặc MCP) ở giai đo
+          +ạn sau.                                                       
+
+● Update(~\claude code\.claude\skills\google-sheet-reader\SKILL.md)
+  ⎿  Added 5 lines, removed 3 lines
+      44  
+      45  ## Quy trình thực hiện (Workflow)
+      46  
+      47 -### Bước 1 — Tiếp nhận dữ liệu đầu vào                         
+      48 -- Xác định nguồn dữ liệu người dùng cung cấp (link Google Sheet
+         - mô tả bằng lời, bảng dán trực tiếp, file đính kèm).           
+      47 +### Bước 1 — "Đọc" dữ liệu đầu vào (mô phỏng đọc Google Sheet) 
+      48 +- Vì Tool chưa kết nối API thật, bước "đọc Google Sheet" được m
+         +ô phỏng bằng cách người dùng cung cấp                          
+      49 +  dữ liệu dưới một trong các hình thức: file CSV đính kèm (expo
+         +rt từ Google Sheets), file XLSX đính kèm,                      
+      50 +  hoặc bảng dữ liệu copy trực tiếp từ Google Sheets dán vào hội
+         + thoại.                                                        
+      51  - Nếu chưa có dữ liệu cụ thể, hỏi người dùng cung cấp:
+      52    - Khoảng thời gian phân tích.
+      53    - Các cột dữ liệu hiện có (tên chiến dịch, ngày, chi phí, hiể
+          n thị, click, chuyển đổi...).
+      54    - Mục tiêu chiến dịch (nhận diện thương hiệu, chuyển đổi, doa
+          nh thu...).
+      53 -- Tham khảo chi tiết cách đọc cấu trúc Google Sheet tại `docs/g
+         -oogle-sheet-guide.md`.                                         
+      55 +- Tham khảo chi tiết cách sử dụng Tool, mô tả input/output, và 
+         +luồng xử lý tại `docs/google-sheet-guide.md`.                  
+      56  
+      57  ### Bước 2 — Kiểm tra dữ liệu đầu vào
+      58  - Áp dụng checklist tại `checklist/data-checklist.md` để rà soá
+          t:
+
+● Giờ viết lại docs/google-sheet-guide.md theo yêu cầu mới: hướng dẫn sử dụng
+  Tool, mô tả input/output, luồng xử lý.
+
+  Read 1 file (ctrl+o to expand)
+
+● Write(~\claude
+       code\.claude\skills\google-sheet-reader\docs\google-sheet-guide.md)
+  ⎿  Added 133 lines, removed 36 lines
+        1 -# Hướng dẫn đọc cấu trúc Google Sheet (Account Performance Mar
+          -keting)                                                       
+        1 +# Hướng dẫn sử dụng Tool — Google Sheet Reader (Mô Phỏng)     
+        2  
+        3 -> Tài liệu này mô tả cách tổ chức và diễn giải dữ liệu từ Goog
+          -le Sheets phục vụ phân tích hiệu suất                         
+        4 -> quảng cáo. Ở giai đoạn hiện tại, skill **không** kết nối API
+          - thật — người dùng cần cung cấp dữ liệu                       
+        5 -> dưới dạng dán bảng, mô tả, hoặc file export.                
+        3 +> **Đây là tài liệu hướng dẫn sử dụng cho Tool mô phỏng (simul
+          +ated tool)**, phục vụ mục đích demo/bài                       
+        4 +> cuối khóa. Tool **chưa kết nối Google Sheets API thật** và *
+          +*chưa dùng MCP** — bước "đọc Google Sheet"                    
+        5 +> được mô phỏng bằng cách người dùng tự cung cấp dữ liệu (CSV,
+          + XLSX, hoặc bảng copy từ Google Sheets).                      
+        6  
+        7 -## 1. Cách tiếp nhận dữ liệu (thủ công)                       
+        7 +## 1. Hướng dẫn sử dụng Tool                                  
+        8  
+        9 -Vì chưa có kết nối API, dữ liệu có thể được cung cấp theo một 
+          -trong các hình thức sau:                                      
+        9 +### Cách gọi Tool                                             
+       10 +Người dùng kích hoạt Tool bằng cách cung cấp dữ liệu quảng cáo
+          + kèm yêu cầu phân tích, ví dụ:                                
+       11  
+       11 -1. **Dán trực tiếp bảng dữ liệu** vào cuộc trò chuyện (copy từ
+          - Google Sheet, dạng bảng hoặc CSV).                           
+       12 -2. **Đính kèm file export** (CSV, XLSX) từ Google Sheet (`File
+          - > Download`).                                                
+       13 -3. **Mô tả bằng lời** các số liệu chính nếu không có bảng đầy 
+          -đủ (ít khuyến khích, chỉ dùng khi cần ước lượng nhanh).       
+       14 -4. **Chia sẻ link Google Sheet** kèm mô tả cấu trúc cột — Clau
+          -de sẽ hướng dẫn người dùng export/dán dữ liệu                 
+       15 -   vì chưa thể tự động truy cập link.                         
+       12 +- "Đọc file CSV này và tóm tắt KPI giúp mình" (đính kèm file `
+          +.csv`)                                                        
+       13 +- "Đây là bảng dữ liệu mình copy từ Google Sheet, phân tích hi
+          +ệu quả chiến dịch giúp mình" (dán bảng)                       
+       14 +- "Phân tích file Excel export từ Google Sheet này và đề xuất 
+          +tối ưu" (đính kèm file `.xlsx`)                               
+       15  
+       17 -## 2. Cấu trúc cột dữ liệu tiêu chuẩn                         
+       16 +### Các hình thức cung cấp dữ liệu được hỗ trợ (mô phỏng "đọc 
+          +Google Sheet")                                                
+       17  
+       19 -Một Google Sheet phục vụ Account Performance Marketing thường 
+          -có các cột sau. Tên cột có thể khác nhau                      
+       20 -tùy nền tảng, cần ánh xạ (mapping) về nhóm chuẩn bên dưới trướ
+          -c khi phân tích:                                              
+       18 +| Hình thức | Mô tả | Cách lấy dữ liệu từ Google Sheets thật |
+       19 +|-----------|-------|-----------------------------------------
+          +-|                                                            
+       20 +| File CSV đính kèm | File `.csv` export từ Google Sheet | Goo
+          +gle Sheet → `File > Download > Comma Separated Values (.csv)` 
+          +|                                                             
+       21 +| File XLSX đính kèm | File `.xlsx` export từ Google Sheet | G
+          +oogle Sheet → `File > Download > Microsoft Excel (.xlsx)` |   
+       22 +| Bảng dán trực tiếp | Copy vùng dữ liệu từ Google Sheet rồi d
+          +án vào hội thoại | Chọn vùng dữ liệu trong Sheet → Copy (`Ctrl
+          ++C`) → Dán vào chat |                                         
+       23 +| Mô tả bằng lời | Người dùng mô tả số liệu chính bằng văn bản
+          + | Chỉ dùng khi không có bảng đầy đủ, độ chính xác thấp hơn | 
+       24  
+       22 -| Nhóm chuẩn        | Tên cột thường gặp                      
+          -        | Ghi chú |                                           
+       23 -|--------------------|----------------------------------------
+          -----------|---------|                                         
+       24 -| Ngày                | `Date`, `Ngày`, `Reporting starts`    
+          -            | Định dạng YYYY-MM-DD hoặc DD/MM/YYYY |          
+       25 -| Kênh quảng cáo      | `Channel`, `Platform`, `Nguồn`        
+          -            | Facebook Ads, Google Ads, TikTok Ads... |       
+       26 -| Tên chiến dịch      | `Campaign`, `Campaign name`, `Tên chiế
+          -n dịch`     | |                                               
+       27 -| Nhóm quảng cáo      | `Ad Set`, `Ad Group`, `Nhóm QC`       
+          -             | Có thể không có nếu dữ liệu ở cấp chiến dịch | 
+       28 -| Chi phí             | `Spend`, `Cost`, `Chi phí`, `Amount sp
+          -ent`         | Cần thống nhất đơn vị tiền tệ |                
+       29 -| Hiển thị            | `Impressions`, `Lượt hiển thị`        
+          -            | |                                               
+       30 -| Lượt tiếp cận       | `Reach`                               
+          -             | Không bắt buộc |                               
+       31 -| Lượt nhấp           | `Clicks`, `Lượt click`                
+          -             | |                                              
+       32 -| Chuyển đổi          | `Conversions`, `Results`, `Chuyển đổi`
+          -             | Cần xác định loại chuyển đổi (mua hàng, lead...
+          -) |                                                           
+       33 -| Doanh thu           | `Revenue`, `Doanh thu`, `Conversion va
+          -lue`          | Cần cho tính ROAS |                           
+       25 +> Vì đây là Tool mô phỏng, **không có bước tự động truy cập li
+          +nk Google Sheet**. Nếu người dùng chỉ                         
+       26 +> đưa link, cần hướng dẫn họ export/copy dữ liệu theo một tron
+          +g các cách ở bảng trên.                                       
+       27  
+       35 -## 3. Các bước ánh xạ dữ liệu                                 
+       28 +### Các bước sử dụng Tool (tóm tắt nhanh)                     
+       29  
+       37 -1. Liệt kê toàn bộ tên cột thực tế trong dữ liệu người dùng cu
+          -ng cấp.                                                       
+       38 -2. Ánh xạ từng cột về nhóm chuẩn ở bảng trên.                 
+       39 -3. Nếu thiếu cột quan trọng (ví dụ: không có cột Doanh thu), g
+          -hi nhận lại để báo cho người dùng                             
+       40 -   biết một số KPI (như ROAS) sẽ không tính được.             
+       41 -4. Thống nhất đơn vị: tiền tệ (VND/USD), định dạng số (dấu phẩ
+          -y/dấu chấm), định dạng ngày tháng.                            
+       30 +1. Cung cấp dữ liệu (CSV/XLSX/bảng dán) theo đúng cấu trúc cột
+          + ở mục 2.                                                     
+       31 +2. Tool kiểm tra dữ liệu theo `checklist/data-checklist.md`.  
+       32 +3. Tool tóm tắt KPI theo `docs/metrics-guide.md`.             
+       33 +4. Tool phân tích hiệu quả, đưa ra nhận xét và đề xuất tối ưu 
+          +theo `templates/optimization-template.md`.                    
+       34 +5. Tool sinh báo cáo Markdown hoàn chỉnh theo `templates/repor
+          +t-template.md`, lưu vào `outputs/`.                           
+       35  
+       43 -## 4. Các dạng bảng dữ liệu thường gặp                        
+       36 +Xem ví dụ đầy đủ với dữ liệu mẫu tại `examples/sample-google-s
+          +heet.csv` và kết quả tương ứng tại                            
+       37 +`examples/sample-analysis-result.md`.                         
+       38  
+       39 +---                                                           
+       40 +                                                              
+       41 +## 2. Mô tả dữ liệu đầu vào (Input)                           
+       42 +                                                              
+       43 +### Cấu trúc cột dữ liệu tiêu chuẩn                           
+       44 +                                                              
+       45 +Tên cột có thể khác nhau tùy nền tảng/nguồn, cần ánh xạ (mappi
+          +ng) về nhóm chuẩn bên dưới trước khi phân tích:               
+       46 +                                                              
+       47 +| Nhóm chuẩn     | Tên cột thường gặp                         
+          + | Ghi chú |                                                  
+       48 +|-----------------|-------------------------------------------
+          +----|---------|                                               
+       49 +| Ngày            | `Date`, `Ngày`, `Reporting starts`        
+          +     | Định dạng YYYY-MM-DD hoặc DD/MM/YYYY |                 
+       50 +| Kênh quảng cáo  | `Channel`, `Platform`, `Nguồn`            
+          +     | Facebook Ads, Google Ads, TikTok Ads... (không bắt buộc
+          + nếu chỉ 1 kênh) |                                            
+       51 +| Tên chiến dịch  | `Campaign`, `Campaign name`, `Tên chiến dị
+          +ch`  | |                                                      
+       52 +| Hiển thị        | `Impressions`, `Lượt hiển thị`            
+          +     | |                                                      
+       53 +| Lượt nhấp       | `Clicks`, `Lượt click`                    
+          +      | |                                                     
+       54 +| CTR             | `CTR`, `Click-Through Rate`               
+          +      | Có thể tính lại từ Clicks/Impressions nếu thiếu |     
+       55 +| CPC             | `CPC`, `Cost per Click`                   
+          +      | Có thể tính lại từ Spend/Clicks nếu thiếu |           
+       56 +| Chi phí         | `Spend`, `Cost`, `Chi phí`, `Amount spent`
+          +      | Cần thống nhất đơn vị tiền tệ |                       
+       57 +| Chuyển đổi      | `Conversions`, `Results`, `Chuyển đổi`    
+          +      | Cần xác định loại chuyển đổi (mua hàng, lead...) |    
+       58 +| CPA             | `CPA`, `Cost per Acquisition`             
+          +      | Có thể tính lại từ Spend/Conversions nếu thiếu |      
+       59 +| Doanh thu       | `Revenue`, `Doanh thu`, `Conversion value`
+          +       | Không bắt buộc — cần cho tính ROAS |                 
+       60 +                                                              
+       61 +> File mẫu `examples/sample-google-sheet.csv` sử dụng đúng 9 c
+          +ột: `Date, Campaign, Impressions, Clicks,                     
+       62 +> CTR, CPC, Spend, Conversions, CPA` — đây là bộ cột tối thiểu
+          + khuyến nghị cho demo.                                        
+       63 +                                                              
+       64 +### Các dạng bảng dữ liệu thường gặp                          
+       65 +                                                              
+       66  - **Dữ liệu theo ngày (daily breakdown):** mỗi dòng là một ngà
+           y của một chiến dịch — phù hợp phân tích xu hướng.
+       67  - **Dữ liệu tổng hợp theo chiến dịch (campaign summary):** mỗi
+            dòng là tổng số liệu của một chiến dịch
+       68    trong cả khoảng thời gian — phù hợp so sánh nhanh giữa các c
+           hiến dịch.
+       69  - **Dữ liệu đa kênh (multi-channel):** gộp dữ liệu từ nhiều nề
+           n tảng quảng cáo — cần chuẩn hóa tên cột
+       70    giữa các nền tảng trước khi so sánh.
+       71  
+       51 -## 5. Lưu ý khi đọc dữ liệu                                   
+       72 +### Yêu cầu tối thiểu để Tool xử lý được                      
+       73  
+       74 +- Có tối thiểu các cột: Ngày, Tên chiến dịch, Spend, Impressio
+          +ns, Clicks.                                                   
+       75 +- Dữ liệu có ít nhất 1 khoảng thời gian liên tục (ví dụ 7 ngày
+          +) để phân tích xu hướng.                                      
+       76 +- Định dạng số và ngày tháng nhất quán trong toàn bộ bảng.    
+       77 +                                                              
+       78 +---                                                           
+       79 +                                                              
+       80 +## 3. Mô tả dữ liệu đầu ra (Output)                           
+       81 +                                                              
+       82 +Sau khi xử lý, Tool tạo ra các loại kết quả sau, theo đúng thứ
+          + tự pipeline ở mục 4:                                         
+       83 +                                                              
+       84 +| Giai đoạn | Loại output | Vị trí trình bày |                
+       85 +|-----------|-------------|-------------------|               
+       86 +| Hiển thị dữ liệu | Bảng dữ liệu gốc đã đọc được (dạng markdo
+          +wn table) | Hiển thị trực tiếp trong hội thoại |              
+       87 +| Kiểm tra dữ liệu | Kết luận tình trạng dữ liệu (Đạt yêu cầu 
+          +/ Có vấn đề / Không đủ) | Hiển thị trực tiếp, theo mẫu ở `chec
+          +klist/data-checklist.md` |                                    
+       88 +| Tóm tắt KPI | Bảng tổng hợp Spend, Impressions, Clicks, CTR,
+          + CPC, Conversions, CPA (và ROAS nếu có Revenue) | Hiển thị trự
+          +c tiếp, theo `docs/metrics-guide.md` |                        
+       89 +| Phân tích | Nhận xét xu hướng theo ngày, so sánh giữa các ch
+          +iến dịch, điểm bất thường | Hiển thị trực tiếp trong hội thoại
+          + |                                                            
+       90 +| Đề xuất tối ưu | Bảng đề xuất theo nhóm Budget/Targeting/Cre
+          +ative/Bidding | Theo khung `templates/optimization-template.md
+          +` |                                                           
+       91 +| Báo cáo cuối cùng | File Markdown hoàn chỉnh gộp toàn bộ các
+          + phần trên | Theo khung `templates/report-template.md`, lưu tạ
+          +i `outputs/` |                                                
+       92 +                                                              
+       93 +Ví dụ output đầy đủ (từ đọc dữ liệu → hiển thị → tóm tắt → phâ
+          +n tích KPI) xem tại                                           
+       94 +`examples/sample-analysis-result.md`.                         
+       95 +                                                              
+       96 +---                                                           
+       97 +                                                              
+       98 +## 4. Luồng xử lý (Pipeline)                                  
+       99 +                                                              
+      100 +```                                                           
+      101 +┌─────────────────────────┐                                   
+      102 +│ 1. Đọc dữ liệu (mô phỏng)│  ← Người dùng cung cấp CSV/XLSX/b
+          +ảng dán                                                       
+      103 +└────────────┬─────────────┘                                  
+      104 +             ▼                                                
+      105 +┌─────────────────────────┐                                   
+      106 +│ 2. Hiển thị dữ liệu       │  ← Tool render lại thành bảng ma
+          +rkdown, xác nhận đã đọc đúng                                  
+      107 +└────────────┬─────────────┘                                  
+      108 +             ▼                                                
+      109 +┌─────────────────────────┐                                   
+      110 +│ 3. Kiểm tra dữ liệu       │  ← Áp dụng checklist/data-checkl
+          +ist.md                                                        
+      111 +└────────────┬─────────────┘                                  
+      112 +             ▼                                                
+      113 +┌─────────────────────────┐                                   
+      114 +│ 4. Tóm tắt KPI            │  ← Áp dụng docs/metrics-guide.md
+      115 +└────────────┬─────────────┘                                  
+      116 +             ▼                                                
+      117 +┌─────────────────────────┐                                   
+      118 +│ 5. Phân tích hiệu quả      │  ← So sánh, xu hướng, bất thườn
+          +g                                                             
+      119 +└────────────┬─────────────┘                                  
+      120 +             ▼                                                
+      121 +┌─────────────────────────┐                                   
+      122 +│ 6. Nhận xét & đề xuất tối ưu│ ← Áp dụng templates/optimizati
+          +on-template.md                                                
+      123 +└────────────┬─────────────┘                                  
+      124 +             ▼                                                
+      125 +┌─────────────────────────┐                                   
+      126 +│ 7. Sinh báo cáo Markdown   │  ← Áp dụng templates/report-tem
+          +plate.md, lưu vào outputs/                                    
+      127 +└─────────────────────────┘                                   
+      128 +```                                                           
+      129 +                                                              
+      130 +### Diễn giải từng bước                                       
+      131 +                                                              
+      132 +1. **Đọc dữ liệu (mô phỏng):** Nhận file CSV/XLSX hoặc bảng dá
+          +n từ người dùng, ánh xạ tên cột về                            
+      133 +   nhóm chuẩn ở mục 2.                                        
+      134 +2. **Hiển thị dữ liệu:** Trình bày lại toàn bộ hoặc một phần d
+          +ữ liệu đã đọc dưới dạng bảng markdown,                        
+      135 +   giúp người dùng xác nhận Tool đã hiểu đúng dữ liệu trước kh
+          +i phân tích sâu hơn.                                          
+      136 +3. **Kiểm tra dữ liệu:** Rà soát theo `checklist/data-checklis
+          +t.md` — thiếu cột, giá trị bất hợp lý,                        
+      137 +   trùng lặp, sai định dạng.                                  
+      138 +4. **Tóm tắt KPI:** Tính các chỉ số tổng hợp theo công thức ch
+          +uẩn tại `docs/metrics-guide.md`.                              
+      139 +5. **Phân tích hiệu quả:** So sánh giữa các chiến dịch, phát h
+          +iện xu hướng theo thời gian và các                            
+      140 +   điểm bất thường.                                           
+      141 +6. **Nhận xét & đề xuất tối ưu:** Đưa ra nhận xét khách quan d
+          +ựa trên số liệu, đề xuất tối ưu theo                          
+      142 +   từng nhóm (Budget, Targeting, Creative, Bidding).          
+      143 +7. **Sinh báo cáo Markdown:** Tổng hợp toàn bộ kết quả các bướ
+          +c trên vào một báo cáo hoàn chỉnh theo                        
+      144 +   `templates/report-template.md`, lưu vào thư mục `outputs/`.
+      145 +                                                              
+      146 +## 5. Lưu ý khi sử dụng                                       
+      147 +                                                              
+      148  - Luôn xác nhận lại khoảng thời gian dữ liệu (từ ngày → đến ng
+           ày) với người dùng.
+       54 -- Nếu dữ liệu có nhiều tab/sheet, hỏi rõ người dùng muốn phân 
+          -tích tab nào.                                                 
+      149 +- Nếu dữ liệu có nhiều tab/sheet (khi copy từ Google Sheet có 
+          +nhiều trang tính), hỏi rõ người dùng                          
+      150 +  muốn phân tích tab nào.                                     
+      151  - Nếu số liệu có dấu hiệu bị cắt (ví dụ dòng cuối không đầy đủ
+           ), cần hỏi lại trước khi tổng hợp.
+       56 -- Sau khi ánh xạ và làm sạch dữ liệu, tiến hành áp dụng `check
+          -list/data-checklist.md` trước khi phân tích.                  
+      152 +- Vì là Tool mô phỏng, mọi số liệu đều dựa hoàn toàn vào dữ li
+          +ệu người dùng cung cấp — Tool không                           
+      153 +  tự bổ sung hoặc suy đoán số liệu còn thiếu.                 
+
+● Write(~\claude
+       code\.claude\skills\google-sheet-reader\examples\sample-google-sheet.csv)
+  ⎿  Wrote 15 lines to
+     ..\.claude\skills\google-sheet-reader\examples\sample-google-sheet.csv
+       1 Date,Campaign,Impressions,Clicks,CTR,CPC,Spend,Conversions,CPA
+         ,65625
+         ,73333
+         ,77143
+         ,65882
+       6 2026-07-25,FB Ads - Sale Thang 7,50500,700,1.39%,1643,1150000,12
+       7 2026-07-26,FB Ads - Sale Thang 7,49000,680,1.39%,1735,1180000,11
+       8 2026-07-27,FB Ads - Sale Thang 7,48000,650,1.35%,1846,1200000,10
+       9 2026-07-21,FB Ads - Nhan Dien Thuong Hieu,38000,650,1.71%,1200,7
+      10 2026-07-22,FB Ads - Nhan Dien Thuong Hieu,39500,6
+     … +19 lines (ctrl+o to expand)
+
+● Write(~\claude code\.claude\skills\google-sheet-reader\examples\sample-analysi
+       s-result.md)
+  ⎿  Wrote 124 lines to ..\.claude\skills\google-sheet-reader\examples\samp
+     le-analysis-result.md
+       1 # Kết Quả Phân Tích — Đọc File `examples/sample-google-sheet.csv
+       2 
+       3 > File này minh họa **output thật** của Tool mô phỏng Google She
+       4 > `sample-google-sheet.csv` (2 chiến dịch Facebook Ads, 7 ngày: 
+         2026-07-21 → 2026-07-27).
+         google-sheet-guide.md`:
+       6 > Đọc dữ liệu → Hiển thị dữ liệu → Kiểm tra dữ liệu → Tóm tắt KP
+       7 
+       8 ---
+      10 ## Bước 1–2: Đọc & Hiển thị dữ liệu
+     … +160 lines (ctrl+o to expand)
+
+  Searched for 1 pattern (ctrl+o to expand)
+
+● Đã hoàn thành, chỉ động vào skill google-sheet-reader, không đụng skill khác:
+
+  1. SKILL.md — cập nhật rõ đây là Tool mô phỏng (không API thật, không MCP),
+  bước "đọc Google Sheet" được giả lập bằng CSV/XLSX/bảng dán.
+  2. docs/google-sheet-guide.md — viết lại đầy đủ: hướng dẫn dùng Tool (cách
+  gọi, hình thức input), mô tả input (cấu trúc cột, yêu cầu tối thiểu), mô tả
+  output (bảng theo từng giai đoạn), và sơ đồ luồng xử lý 7 bước.
+  3. examples/sample-google-sheet.csv — dữ liệu giả lập 2 chiến dịch Facebook
+  Ads, 7 ngày (21–27/07/2026), đủ 9 cột: Date, Campaign, Impressions, Clicks,
+  CTR, CPC, Spend, Conversions, CPA. Một chiến dịch có xu hướng ad fatigue (CTR
+  giảm, CPA tăng), một chiến dịch cải thiện dần — đủ dữ liệu để phân tích có ý
+  nghĩa.
+  4. examples/sample-analysis-result.md — kết quả end-to-end thật khi Tool đọc
+  file CSV trên: hiển thị dữ liệu → kiểm tra dữ liệu → tóm tắt KPI (theo từng
+  chiến dịch + tổng) → phân tích → nhận xét → đề xuất tối ưu.
+
+  Dừng lại ở đây, chờ bạn review.
+
+✻ Sautéed for 3m 15s
+
+❯ chuyển hết về marketing-workingspace cho mình, bạn đang tạo folder mới mất    
+  rồi                                                                           
+
+  Searched for 3 patterns, read 1 file, listed 2 directories, ran 2 shell commands (ctrl+o to expand)
+
+● Đã rõ vấn đề: skill nằm ở C:\Users\User\claude 
+  code\.claude\skills\google-sheet-reader (thư mục gốc, sai chỗ) thay vì trong
+  marketing-workspace\.claude\skills\. Mình sẽ chuyển toàn bộ vào đúng nơi.
+
+  Searched for 1 pattern, ran 2 shell commands (ctrl+o to expand)
+
+● Đã chuyển xong. Skill google-sheet-reader giờ nằm đúng vị trí trong project
+  git thật của bạn:
+
+  marketing-workspace/.claude/skills/google-sheet-reader/
+  ├── SKILL.md
+  ├── templates/{report-template.md, optimization-template.md}
+  ├── checklist/data-checklist.md
+  ├── docs/{metrics-guide.md, google-sheet-guide.md}
+  ├── examples/{sample-analysis.md, sample-google-sheet.csv,
+  sample-analysis-result.md}
+  └── outputs/
+
+  Đã dọn sạch thư mục .claude/skills sai chỗ ở gốc claude code (chỉ còn
+  settings.local.json như ban đầu). Các skill khác trong marketing-workspace
+  (ads-report, campaign-planner, client-reply, proposal-generator) không bị đụng
+  tới. Thư mục git đang ở trạng thái sạch, chỉ có google-sheet-reader là
+  untracked (chưa commit) — bạn xác nhận nếu muốn mình git add/commit, mình sẽ
+  không tự ý commit khi chưa được yêu cầu.
+✻ Churned for 1m 13s
+
+※ recap: Building a simulated Google Sheet Reader skill for your marketing-workspace demo project; just moved it into the correct folder and confirmed the other skills weren't touched. Next: let me know if you want the new skill folder committed to git. (disable recaps in /config)
+
+❯ Mình muốn chạy thử Tool google-sheet-reader vừa tạo.                          
+                                                                                
+  Sử dụng file:                                                                 
+                                                                                
+  examples/sample-google-sheet.csv                                              
+                                                                                
+  Yêu cầu mô phỏng đúng quy trình sử dụng thực tế:                              
+                                                                                
+  1. Đọc dữ liệu từ file CSV.                                                   
+  2. Kiểm tra dữ liệu đầu vào theo checklist.                                   
+  3. Tính và tóm tắt các KPI chính.                                             
+  4. Phân tích hiệu quả chiến dịch.                                             
+  5. Đưa ra các nhận xét nổi bật.                                               
+  6. Đề xuất tối ưu theo optimization-template.md.                              
+  7. Sinh file báo cáo hoàn chỉnh vào:                                          
+                                                                                
+  outputs/                                                                      
+  report-from-google-sheet.md                                                   
+                                                                                
+  Đây là bài test để chứng minh Tool hoạt động.                                 
+                                                                                
+  Sau khi hoàn thành hãy dừng lại và báo mình.                                  
+
+  Read 4 files (ctrl+o to expand)
+
+● Đã đọc đủ CSV mẫu và các template (checklist, report-template,
+  optimization-template). Giờ mình chạy đúng quy trình 7 bước và sinh báo cáo
+  thật.
+
+● Write(.claude\skills\google-sheet-reader\outputs\report-from-google-sheet.md)
+  ⎿  Wrote 224 lines to
+     .claude\skills\google-sheet-reader\outputs\report-from-google-sheet.md
+       1 # Báo Cáo Hiệu Suất Chiến Dịch Quảng Cáo
+       2 
+         heet-reader`)
+       4 - **Chiến dịch/Phạm vi phân tích:** 2 chiến dịch — "FB Ads - Sal
+         e Thang 7" và "FB Ads - Nhan Dien Thuong Hieu"
+       6 - **Khoảng thời gian:** 2026-07-21 — 2026-07-27 (7 ngày)
+       7 - **Ngày lập báo cáo:** 2026-07-28
+       8 - **Người thực hiện:** Tool `google-sheet-reader` (chạy thử end-
+       9 
+      10 ---
+     … +297 lines (ctrl+o to expand)
+
+  Ran 1 shell command (ctrl+o to expand)
+
+● Đã chạy thử xong Tool google-sheet-reader với đúng quy trình 7 bước trên dữ
+  liệu thật từ examples/sample-google-sheet.csv:
+
+  1. Đọc dữ liệu — 14 dòng, 2 chiến dịch Facebook Ads, 7 ngày (21–27/07/2026).
+  2. Kiểm tra dữ liệu theo checklist — Đạt yêu cầu, chỉ thiếu cột Doanh thu (ghi
+  chú rõ ROAS không tính được).
+  3. Tóm tắt KPI — theo từng chiến dịch và tổng hợp toàn bộ (CTR, CPC, CPM, CPA,
+  Spend, Conversions).
+  4. Phân tích hiệu quả — so sánh 2 chiến dịch, xu hướng theo ngày, phát hiện
+  dấu hiệu ad fatigue ở "Sale Thang 7".
+  5. Nhận xét nổi bật — điểm tích cực/hạn chế/nguyên nhân dựa trên số liệu cụ
+  thể.
+  6. Đề xuất tối ưu — đầy đủ 5 nhóm theo đúng cấu trúc optimization-template.md
+  (Quan sát/Đề xuất/Ưu tiên/Kỳ vọng) + bảng tổng hợp ưu tiên hành động.
+  7. Sinh báo cáo — đã lưu tại marketing-workspace/.claude/skills/google-sheet-r
+  eader/outputs/report-from-google-sheet.md.
+
+  File này hiện là untracked trong git (?? .claude/skills/google-sheet-reader/),
+  chưa commit — báo bạn xác nhận nếu muốn mình commit.
+
+✻ Cogitated for 2m 2s
+
+※ recap: We built a simulated Google Sheet Reader skill for marketing-workspace and just test-ran it on sample CSV data, producing report-from-google-sheet.md. Next: confirm whether you want that report committed to git. (disable recaps in /config)
+
+❯ Hãy đóng vai Performance Marketing Agent.                                     
+                                                                                
+  Nhiệm vụ:                                                                     
+                                                                                
+  1. Sử dụng Tool google-sheet-reader để đọc dữ liệu từ:                        
+                                                                                
+  examples/sample-google-sheet.csv                                              
+                                                                                
+  2. Sử dụng Skill ads-report để tạo báo cáo.                                   
+                                                                                
+  3. Sau khi báo cáo hoàn tất, chuyển kết quả cho Client Support Agent.         
+                                                                                
+  4. Client Support Agent sử dụng Skill client-reply để tạo email gửi khách     
+  hàng.                                                                         
+                                                                                
+  5. Lưu các file vào:                                                          
+                                                                                
+  outputs/report-from-google-sheet.md                                           
+                                                                                
+  outputs/email-to-client.md                                                    
+                                                                                
+  Đây là bài demo hoàn chỉnh cho workflow cuối khóa.                            
+                                                                                
+  Sau khi hoàn thành hãy dừng lại.                                              
+
+  Read 6 files (ctrl+o to expand)
+
+● Giờ đọc các file của skill client-reply để soạn email đúng chuẩn.
+
+  Searched for 1 pattern, read 5 files (ctrl+o to expand)
+
+● Write(outputs\report-from-google-sheet.md)
+  ⎿  Wrote 96 lines to outputs\report-from-google-sheet.md
+       1 # Báo cáo hiệu quả quảng cáo
+       2 
+       3 **Khách hàng:** Demo Client (dữ liệu chạy thử end-to-end workflo
+       4 **Kênh:** Facebook Ads
+       5 **Giai đoạn báo cáo:** 21/07/2026 - 27/07/2026
+       6 **Người thực hiện:** Performance Marketing Agent (qua Tool `goog
+         le-sheet-reader` + Skill `ads-report`)
+       8 ---
+       9 
+      10 ## 1. Tổng quan
+     … +130 lines (ctrl+o to expand)
+
+● Write(outputs\email-to-client.md)
+  ⎿  Wrote 10 lines to outputs\email-to-client.md
+      1 Chào chị Hoa,
+      3 Em vừa gửi chị báo cáo hiệu quả quảng cáo Facebook Ads giai đoạn 
+        21/07 - 27/07/2026 (đính kèm file `report-from-google-sheet.md`).
+        ất tốt, chi phí trên mỗi chuyển đổi (CPA) giảm dần và còn 31.429đ
+         ở ngày cuối kỳ. Tuy nhiên, "FB Ads - Sale Thang 7" đang giảm hiệ
+        i (từ 65.625đ lên 120.000đ) chỉ trong 7 ngày. Nguyên nhân chính l
+        à bộ creative của chiến dịch này đang có dấu hiệu "mỏi" sau thời 
+      4 
+      5 Trong báo cáo, em đã đề xuất làm mới creative cho "FB Ads - Sale 
+        en T
+     … +13 lines (ctrl+o to expand)
+
+  Ran 1 shell command (ctrl+o to expand)
+
+● Đã hoàn thành demo workflow đầy đủ 2 agent:
+
+  Performance Marketing Agent (đọc CSV bằng Tool google-sheet-reader → phân tích
+  & lên báo cáo bằng Skill ads-report):
+  - Đọc examples/sample-google-sheet.csv (2 chiến dịch FB Ads, 7 ngày), kiểm tra
+  dữ liệu, tính KPI (Impression, CTR, CPC, CPM, Conversion, Conversion Rate,
+  CPA — bỏ Reach/Frequency/ROAS vì thiếu dữ liệu nguồn).
+  - Điền đúng templates/report-template.md của ads-report, đối chiếu văn phong
+  với examples/sample-report.md, rà theo checklist/qa-checklist.md.
+  - Phát hiện: "FB Ads - Nhan Dien Thuong Hieu" đang cải thiện tốt, "FB Ads -
+  Sale Thang 7" có dấu hiệu ad fatigue rõ rệt (CTR giảm, CPA tăng gần gấp đôi).
+  - → Lưu tại outputs/report-from-google-sheet.md.
+
+  Client Support Agent (nhận báo cáo → soạn email bằng Skill client-reply):
+  - Dùng templates/report-reply.md (kết hợp phiên bản "kết quả tốt" và "chưa đạt
+  kỳ vọng" vì kết quả trái chiều giữa 2 chiến dịch), theo đúng
+  docs/tone-of-voice.md, rà theo checklist/qa-checklist.md.
+  - CTA rõ ràng: xin lịch trao đổi trước khi triển khai điều chỉnh ngân
+  sách/creative, và xin bổ sung dữ liệu Doanh thu.
+  - → Lưu tại outputs/email-to-client.md.
+
+  Cả hai file hiện đang untracked trong git (?? outputs/...), chưa commit — báo
+  bạn xác nhận nếu muốn mình commit lại toàn bộ demo này.
+
+✻ Sautéed for 2m 50s
+
+❯ commit toàn bộ demo lên git nhé                                               
+
+  Ran 2 shell commands (ctrl+o to expand)
+
+● Đã stage đủ. Giờ tạo commit.
+
+  Committed 95ca414 (ctrl+o to expand)
+
+● Đã commit thành công (95ca414) trên branch main, working tree sạch. Commit gồm
+  12 file: toàn bộ skill google-sheet-reader (SKILL.md, checklist, docs,
+  templates, examples) và 2 file demo cuối khóa
+  (outputs/report-from-google-sheet.md, outputs/email-to-client.md). Chưa push
+  lên remote — báo mình nếu bạn muốn push.
+
+✻ Churned for 15s
+
+❯ push lên git marketing-workspace nhé                                          
+  Ran 1 shell command (ctrl+o to expand)
+
+● Remote là origin → github.com/nphuongha003/marketing-workspace.git, local main
+  đang ahead 1 commit. Mình sẽ push.
+
+  Pushed to main (ctrl+o to expand)
+
+● Đã push thành công lên origin/main (a6e8a45..95ca414). Repo GitHub
+  nphuongha003/marketing-workspace giờ đã có đầy đủ skill google-sheet-reader và
+  demo workflow cuối khóa.
+
+✻ Cogitated for 13s
+
+※ recap: Building a simulated Google Sheet Reader tool and multi-agent marketing demo in your marketing-workspace repo. Just committed and pushed everything to GitHub main; no pending action unless you want further changes.
+
+❯ tạo thư mục data trong marketing-workspace                                    
+
+  Listed 1 directory (ctrl+o to expand)
+
+● Chưa có, mình tạo mới.
+
+  Ran 1 shell command (ctrl+o to expand)
+
+● Đã tạo xong thư mục marketing-workspace/data. Lưu ý thư mục trống này git sẽ
+  không track cho đến khi có file bên trong — báo mình nếu bạn muốn thêm gì vào
+  đó hoặc cần commit/push tiếp.
+
+✻ Churned for 10s
+
+❯ Hãy kiểm tra thư mục data trong marketing-workspace.                          
+                                                                                
+  Cho mình biết hiện đang có những file nào.                                    
+
+  Searched for 1 pattern, listed 1 directory (ctrl+o to expand)
+
+● Trong marketing-workspace/data hiện có 1 file:
+
+  - Nhà-Hát-Tuổi-Trẻ-(TKT)-Chiến-dịch-11-Tháng-3-2026-27-Tháng-7-2026.csv — dung
+  lượng ~33,9 KB, chỉnh sửa lúc 17:56 28/07/2026.
+
+  Tên file gợi ý đây là dữ liệu chiến dịch quảng cáo thật của "Nhà Hát Tuổi Trẻ
+  (TKT)" từ 11/03/2026 đến 27/07/2026 (không phải file mẫu
+  sample-google-sheet.csv mình tạo trước đó). Bạn có muốn mình xem qua cấu trúc
+  cột của file này không?
+
+✻ Churned for 11s
+
+❯ có                                                                            
+
+  Read 1 file (ctrl+o to expand)
+
+● Đây là file export thật từ Facebook Ads Manager (không phải dữ liệu mẫu), của
+  khách hàng "Nhà Hát Tuổi Trẻ" — 97 dòng dữ liệu (98 dòng gồm header), phạm vi
+  11/03/2026 – 27/07/2026.
+
+  Cấu trúc cột (26 cột):
+
+  ┌──────────────┬──────────────────────────────────────────────────────────┐
+  │     Nhóm     │                           Cột                            │
+  ├──────────────┼──────────────────────────────────────────────────────────┤
+  │ Thời gian &  │ Lượt bắt đầu/kết thúc báo cáo, Tên chiến dịch, Lượt phân │
+  │ phân loại    │  phối (active/inactive/completed), Ngày tạo              │
+  ├──────────────┼──────────────────────────────────────────────────────────┤
+  │ Kết quả &    │ Kết quả, Chỉ báo kết quả, Chi phí trên mỗi kết quả, Ngân │
+  │ chi phí      │  sách nhóm QC, Loại ngân sách, Số tiền đã chi tiêu       │
+  │              │ (VND), Kết thúc, Cài đặt ghi nhận                        │
+  ├──────────────┼──────────────────────────────────────────────────────────┤
+  │ Chuyển       │ Lượt mua, Giá trị chuyển đổi từ lượt mua, ROAS của lượt  │
+  │ đổi/thương   │ mua, Đơn đặt hàng đã tạo/đã vận chuyển                   │
+  │ mại          │                                                          │
+  ├──────────────┼──────────────────────────────────────────────────────────┤
+  │ Tương tác    │ Người liên hệ nhắn tin mới + chi phí, Lượt bắt đầu cuộc  │
+  │ tin nhắn     │ trò chuyện + chi phí                                     │
+  ├──────────────┼──────────────────────────────────────────────────────────┤
+  │ Reach &      │ Người tiếp cận, Lượt hiển thị, Lượt tương tác với bài    │
+  │ Engagement   │ viết, Tần suất, Lượt click vào liên kết                  │
+  └──────────────┴──────────────────────────────────────────────────────────┘
+
+  Nhận xét nhanh:
+  - Đây khác hẳn cấu trúc file mẫu sample-google-sheet.csv (không có sẵn
+  CTR/CPC/CPA đã tính, mà phải tự tính từ Impressions/Click/Spend/Conversions).
+  - Nhiều dòng có "Chỉ báo kết quả" = reach (mục tiêu nhận diện), không phải
+  purchase/conversion — nghĩa là phần lớn chiến dịch đang track theo Reach chứ
+  không phải theo Lượt mua.
+  - Có dấu hiệu dữ liệu không đồng nhất: cột "Số tiền đã chi tiêu (VND)" ở nhiều
+  dòng ghi 0 dù có "Chi phí trên mỗi kết quả" — cần kiểm tra kỹ trước khi phân
+  tích (đúng như bước checklist của Tool google-sheet-reader).
+
+  Bạn có muốn mình chạy thử Tool google-sheet-reader (đọc → kiểm tra dữ liệu →
+  tóm tắt KPI) trên chính file thật này không?
+
+✻ Churned for 21s
+
+❯ Hãy sử dụng Tool google-sheet-reader để xử lý file:                           
+                                                                                
+  data/Nhà-Hát-Tuổi-Trẻ-(TKT)-Chiến-dịch-11-Tháng-3-2026-27-Tháng-7-2026.csv    
+                                                                                
+  Thực hiện đúng workflow của Tool:                                             
+                                                                                
+  1. Đọc dữ liệu.                                                               
+                                                                                
+  2. Kiểm tra dữ liệu đầu vào.                                                  
+                                                                                
+  3. Tóm tắt KPI.                                                               
+                                                                                
+  4. Phân tích hiệu quả chiến dịch.                                             
+                                                                                
+  5. Đề xuất tối ưu.                                                            
+                                                                                
+  6. Sinh file:                                                                 
+                                                                                
+  outputs/tkt-analysis-report.md                                                
+                                                                                
+  Không sử dụng dữ liệu giả.                                                    
+  Sử dụng đúng dữ liệu trong file CSV.                                          
+
+  Made 3 scratchpad edits +225 -3, read 3 files, ran 10 shell commands (ctrl+o to expand)
+
+● Write(outputs\tkt-analysis-report.md)
+  ⎿  Wrote 284 lines to outputs\tkt-analysis-report.md
+       1 # Báo Cáo Hiệu Suất Chiến Dịch Quảng Cáo
+       3 - **Tài khoản/Khách hàng:** ⚠️ Cần xác nhận lại — xem cảnh báo ở 
+         mục 1.2
+         mục tiêu **Reach** (100%), toàn bộ mang tên "Aeon Mall Tân Phú |
+       5 - **Kênh quảng cáo:** Facebook Ads
+       6 - **Khoảng thời gian:** 11/03/2026 – 27/07/2026 (theo phạm vi bá
+         /07/2026 (17 đợt tạo chiến dịch khác nhau)
+       7 - **Ngày lập báo cáo:** 2026-07-28
+          file CSV thật
+      10 ---
+     … +413 lines (ctrl+o to expand)
+  Ran 1 shell command (ctrl+o to expand)
+
+● Đã chạy Tool google-sheet-reader trên file thật và sinh báo cáo tại
+  outputs/tkt-analysis-report.md. Có một phát hiện quan trọng cần bạn lưu ý
+  ngay:
+
+  ⚠️ Cảnh báo nghiêm trọng (phát hiện ở bước Kiểm tra dữ liệu): File tên là "Nhà
+  Hát Tuổi Trẻ (TKT)" nhưng 100% trong 96 chiến dịch bên trong đều mang tên 
+  "Aeon Mall Tân Phú" — không có dòng nào nhắc đến Nhà Hát Tuổi Trẻ/TKT. Rất có
+  thể file bị nhầm giữa 2 khách hàng. Mình vẫn hoàn thành báo cáo đầy đủ theo dữ
+  liệu thật có trong file (để phục vụ demo/test Tool), nhưng khuyến nghị không 
+  gửi báo cáo này cho khách cho đến khi xác nhận lại đúng file.
+
+  Các phát hiện chính khác (toàn bộ tính từ số liệu thật, đã đối chiếu chéo bằng
+  script):
+  - Tổng chi: 38.690.616đ cho 96 chiến dịch, mục tiêu 100% là Reach (không phải
+  Conversion) → không có cột CTR/CPC/CPA/Revenue/ROAS chuẩn, mình đã điều chỉnh
+  bộ KPI cho phù hợp (Reach, Impressions, CPM, Frequency, Engagement Rate, Link
+  CTR...).
+  - Reach thật toàn tài khoản: 2.545.726 người (lấy từ dòng tổng — không phải
+  cộng dồn Reach từng chiến dịch, vì cộng dồn sẽ bị trùng và ra 5.542.690, sai
+  gấp đôi).
+  - 0/96 chiến dịch có dữ liệu Lượt mua/Doanh thu → không thể đánh giá ROAS
+  trong suốt 4,5 tháng.
+  - Phát hiện outlier đáng chú ý: chiến dịch "ĐẶC QUYỀN RIÊNG CHO NGƯỜI NHÀ" đạt
+  tỷ lệ tương tác 36,91% — gấp ~230 lần trung vị toàn tài khoản (0,159%), gợi ý
+  phong cách nội dung "ưu đãi thành viên" nên được nhân rộng.
+  - Tháng 3 vừa tốn ngân sách nhiều nhất vừa kém hiệu quả nhất (CPM cao nhất,
+  tương tác thấp nhất).
+
+  Báo cáo đầy đủ (kèm bảng dữ liệu gốc, checklist, KPI, phân tích theo tháng, và
+  5 nhóm đề xuất tối ưu) đã lưu tại outputs/tkt-analysis-report.md. File này
+  đang untracked trong git — báo mình nếu muốn commit.
+
+✻ Churned for 7m 49s
+
+※ recap: Building a demo Google Sheets analysis workflow in marketing-workspace; just ran the tool on a real client CSV and found the filename says "Nhà Hát Tuổi Trẻ" but all 96 campaigns inside are actually "Aeon Mall Tân Phú." Next: confirm with you which client this data really belongs to before using the report further.
